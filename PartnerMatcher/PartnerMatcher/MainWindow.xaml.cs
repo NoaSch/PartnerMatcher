@@ -25,5 +25,39 @@ namespace PartnerMatcher
             InitializeComponent();
             Console.WriteLine("test");
         }
+
+        private void sign_Click(object sender, RoutedEventArgs e)
+        {
+            connWin cw = new connWin();
+            cw.ShowDialog();
+            if (cw.conf == true)
+                userName.Content = cw.Username;
+
+        }
+
+        private void crateAcc_Click(object sender, RoutedEventArgs e)
+        {
+            userAndPass createWin = new userAndPass();
+            createWin.Show();
+
+
+        }
+
+        private void postButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+
+        }
+
+        private void findBtn_Click(object sender, RoutedEventArgs e)
+        {
+            findWin fw = new findWin();
+            fw.ShowDialog();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+        }
     }
 }

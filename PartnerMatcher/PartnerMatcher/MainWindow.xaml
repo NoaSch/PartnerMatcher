@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="395,10,0,0" VerticalAlignment="Top" Width="100">
+            <StackPanel Height="40
+                        " Orientation="Horizontal" >
+                <Label x:Name="helloLbl" Content="Hello"/>
+                <Label x:Name="userName" Content="Guest" FontFamily="Segoe UI Black" />
+
+            </StackPanel>
+            <Button x:Name="sign" Content="Sign In" Click="sign_Click" FontFamily="Segoe UI Black"/>
+            <Button x:Name="crateAcc" Content="Create Account" Margin=" 0,10,0,0" Click="crateAcc_Click" FontFamily="Segoe UI Black"/>
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="110" Margin="115,155,0,0" VerticalAlignment="Top" Width="215">
+            <StackPanel Height="50" Orientation="Horizontal">
+                <Button x:Name="postButton" Content="post Add" RenderTransformOrigin="0.5,0.5" Width="100" Click="postButton_Click" FontFamily="Segoe UI Black"/>
+            </StackPanel>
+            <StackPanel Height="45" Margin="0,10,-5,0" Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="1.102"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.481"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <Button x:Name="findBtn" Content="Find Partner" Margin="0,0,0,-5.333" Width="100" FontFamily="Segoe UI Black" Click="findBtn_Click"/>
+                <Button x:Name="button" Content="Magic Find" Width="95" Margin="10  ,0,0,-5.333" Click="button_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="225" VerticalAlignment="Top" Width="300" Source="pics/newLogo.png" Stretch="Fill" Margin="65,-40,0,0"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="340,170,0,0" VerticalAlignment="Top" Width="100" Source="pics/partners.png"/>
+
+
     </Grid>
 </Window>
