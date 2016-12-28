@@ -18,7 +18,7 @@
             </StackPanel>
             <StackPanel Height="30" Orientation="Horizontal" Margin="0,0,-70,0">
                 <Label x:Name="passLbl" Content="Password:"/>
-                <TextBox x:Name="passxt" TextWrapping="Wrap" Text="" Width="120"/>
+                <PasswordBox x:Name="passBox" PasswordChar="*" Width="120"/>
             </StackPanel>
         </StackPanel>
         <Button x:Name="button" Content="Create Account" HorizontalAlignment="Left" Margin="90,45.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Height="40" Click="create_Click"/>

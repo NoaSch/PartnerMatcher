@@ -7,33 +7,40 @@ using System.Threading.Tasks;
 
 namespace PartnerMatcher
 {
-    class BusLogic
+    public class BusLogic
     {
-        public List<string> ListboxItems = new List<string>();
-        public void PopulateListBoxItems(string userName)
+        public List<string> areas;
+        //public static List<string> kinds;
+        public Dictionary<string, string> kinds;
+
+
+
+        public BusLogic()
         {
-            string connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\redgabanan\Desktop\Gabanan_Red_dbaseCon\Red_Database.accdb";
-            using (OleDbConnection connection = new OleDbConnection(connString))
-            {
-                connection.Open();
-                OleDbDataReader reader = null;
-                OleDbCommand command = new OleDbCommand("SELECT * from  Users WHERE LastName='@1'", connection);
-                command.Parameters.AddWithValue("@1", userName);
-                reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    ListboxItems.Add(reader[1].ToString() + "," + reader[2].ToString());
-                }
-            }
+            addLists();
+        }
+        private void addLists()
+        {
+            areas = new List<string>();
+            string[] areasArr = { "South", "North", "Center", "Sharon", "Eilat" };
+            areas.AddRange(areasArr);
+
+
+
+            kinds = new Dictionary<string, string>();
+            kinds.Add("Real Estate", "realEstates");
+            kinds.Add("Sport", "Sport");
+            kinds.Add("Travel", "Trips");
+            kinds.Add("Dates", "Dates");
         }
     }
 }
 
- /* var busLogic = new BusLogic();
-        busLogic.PopulateListBoxItems(textBox8.Text);          
+/* var busLogic = new BusLogic();
+       busLogic.PopulateListBoxItems(textBox8.Text);          
 listBox1.Items.Clear();
-        ListboxItems.DataSource = busLogic.ListboxItems;
- * 
+       ListboxItems.DataSource = busLogic.ListboxItems;
+* 
 }
 }
 }

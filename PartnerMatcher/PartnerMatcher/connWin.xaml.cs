@@ -21,7 +21,7 @@ namespace PartnerMatcher
     /// </summary>
     public partial class connWin : Window
     {
-        public string Username;
+        public string usr;
         public bool conf;
         public connWin()
         {
@@ -33,7 +33,7 @@ namespace PartnerMatcher
         private void connect_Click(object sender, RoutedEventArgs e)
         {
             {
-                if (passxt.Text == "" || mailTxt.Text == "")
+                if (passBox.Password == "" || mailTxt.Text == "")
                 {
                     System.Windows.MessageBox.Show("All fields are mandatory", "Error");
 
@@ -41,7 +41,6 @@ namespace PartnerMatcher
 
                 else
                 {
-                    Username = mailTxt.Text;
 
                     OleDbConnection conn = new OleDbConnection();
 
@@ -51,20 +50,21 @@ namespace PartnerMatcher
                     OleDbDataReader reader = null;
                     //  OleDbDataAdapter da = new OleDbDataAdapter("select  * from tblmedic where medicalschool ='" + combobox.text.ToString().Trim() + "'", conn);
 
-                    OleDbCommand command = new OleDbCommand("SELECT Pass from Passwords WHERE  UserName ='" + mailTxt.Text.ToString().Trim() + "'", conn);
-                    // OleDbCommand command = new OleDbCommand("SELECT * from  Passwords WHERE UserName='@1'", conn);
-                    //command.Parameters.AddWithValue("@1", Username);
+                    OleDbCommand command = new OleDbCommand("SELECT Pass, FullName from Profiles WHERE  mail ='" + mailTxt.Text.ToString().Trim() + "'", conn);
+                    // OleDbCommand command = new OleDbCommand("SELECT * from  Profiles WHERE mail='@1'", conn);
+                    //command.Parameters.AddWithValue("@1", mail);
                     reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         string ans = reader[0].ToString();
-                        if (ans != passxt.Text)
+                        if (ans != passBox.Password)
                         {
                             System.Windows.MessageBox.Show("Wrong Password", "Error");
                         }
                         else
                         {
                             conf = true;
+                            usr = reader[1].ToString();
                             Close();
 
                         }
@@ -85,7 +85,7 @@ namespace PartnerMatcher
          *  connection.Open();
                 OleDbDataReader reader = null;
                 OleDbCommand command = new OleDbCommand("SELECT * from  Users WHERE LastName='@1'", connection);
-                command.Parameters.AddWithValue("@1", userName);
+                command.Parameters.AddWithValue("@1", mail);
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {

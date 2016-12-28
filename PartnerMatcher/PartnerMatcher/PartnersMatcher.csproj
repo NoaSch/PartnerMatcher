@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddProfileWin.xaml.cs">
+      <DependentUpon>AddProfileWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BusLogic.cs" />
     <Compile Include="connWin.xaml.cs">
       <DependentUpon>connWin.xaml</DependentUpon>
@@ -62,9 +65,14 @@
     <Compile Include="findWin.xaml.cs">
       <DependentUpon>findWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapToDb.cs" />
     <Compile Include="userAndPass.xaml.cs">
       <DependentUpon>userAndPass.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddProfileWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="connWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

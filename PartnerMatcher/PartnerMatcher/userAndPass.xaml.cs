@@ -22,16 +22,16 @@ namespace PartnerMatcher
     /// </summary>
     public partial class userAndPass : Window
     {
-        string Username;
+        //string mail;
         public userAndPass()
         {
             InitializeComponent();
-           
+
         }
 
         private void create_Click(object sender, RoutedEventArgs e)
         {
-            if (passxt.Text == "" || mailTxt.Text == "")
+            if (passBox.Password == "" || mailTxt.Text == "")
             {
                 System.Windows.MessageBox.Show("All fields are mandatory", "Error");
 
@@ -39,56 +39,69 @@ namespace PartnerMatcher
 
             else
             {
-                OleDbConnection conn = new OleDbConnection();
+                string mail = mailTxt.Text;
+                string Pass = passBox.Password;
+                AddProfileWin apw = new AddProfileWin();
+                apw.mail = mail;
+                apw.pass = Pass;
+                apw.ShowDialog();
 
-                // conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\noa\Dropbox\תיקייה משותפת ניתוץ\עבודה 3\GUI\PartnerMatcher\PartnerMatcher\Database.mdb"
-                conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb"
-
-  ;
-
-                Username = mailTxt.Text;
-                string Pass = passxt.Text;
-
-                //OleDbCommand cmd = new OleDbCommand("INSERT into Passwords (UserName, Pass) values(@Username, @Pass)");
-                OleDbCommand cmd = new OleDbCommand();
-                // cmd.CommandText = "INSERT into Passwords (UserName, Pass) values(" + Username + ", " + Pass + ")";
-                cmd.CommandText = "INSERT into Passwords (UserName, Pass) values(@Username, @Pass)";
-                cmd.Connection = conn;
-
-                conn.Open();
-
-                if (conn.State == ConnectionState.Open)
-                {
-                    cmd.Parameters.Add("@UserName", OleDbType.VarChar).Value = Username;
-                    cmd.Parameters.Add("@Pass", OleDbType.VarChar).Value = Pass;
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Added");
-                        MailMessage mail = new MailMessage("noasch4@gmail.com", Username);
-                        SmtpClient client = new SmtpClient();
-                        client.Port = 25;
-                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                        client.UseDefaultCredentials = false;
-                        client.Host = "smtp.google.com";
-                        mail.Subject = "this is a test email.";
-                        mail.Body = "this is my test email body";
-                        // client.Send(mail);
-                        conn.Close();
-                    }
-                    catch (OleDbException ex)
-                    {
-                        MessageBox.Show(ex.Source);
-                        MessageBox.Show(ex.Message);
-                        conn.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Connection Failed");
-                }
             }
+
+            /*   {
+                  OleDbConnection conn = new OleDbConnection();
+
+                   // conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\noa\Dropbox\תיקייה משותפת ניתוץ\עבודה 3\GUI\PartnerMatcher\PartnerMatcher\Database.mdb"
+                   conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb"
+
+     ;
+
+                   mail = mailTxt.Text;
+                   string Pass = passxt.Text;
+
+                   //OleDbCommand cmd = new OleDbCommand("INSERT into Profiles (mail, Pass) values(@mail, @Pass)");
+                   OleDbCommand cmd = new OleDbCommand();
+                   // cmd.CommandText = "INSERT into Profiles (mail, Pass) values(" + mail + ", " + Pass + ")";
+                   cmd.CommandText = "INSERT into Profiles (mail, Pass) values(@mail, @Pass)";
+                   cmd.Connection = conn;
+
+                   conn.Open();
+
+                   if (conn.State == ConnectionState.Open)
+                   {
+                       cmd.Parameters.Add("@mail", OleDbType.VarChar).Value = mail;
+                       cmd.Parameters.Add("@Pass", OleDbType.VarChar).Value = Pass;
+
+                       try
+                       {
+                           cmd.ExecuteNonQuery();
+                           MessageBox.Show("Data Added");
+                           MailMessage mailMsg = new MailMessage("PartnersMatcher@gmail.com", mail);
+                          SmtpClient client = new SmtpClient();
+                           client.Port = 25;
+                           client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                           client.UseDefaultCredentials = false;
+                           client.Host = "smtp.google.com";
+                           mailMsg.Subject = "this is a test email.";
+                           mailMsg.Body = "this is my test email body";
+
+                           // client.Send(mailMsg);
+                           conn.Close();
+                       }
+                       catch (OleDbException ex)
+                       {
+                           MessageBox.Show(ex.Source);
+                           MessageBox.Show(ex.Message);
+                           conn.Close();
+                       }
+
+
+                   }
+                   else
+                   {
+                       MessageBox.Show("Connection Failed");
+                   }
+               }*/
         }
     }
 

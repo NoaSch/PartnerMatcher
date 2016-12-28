@@ -26,7 +26,7 @@ namespace PartnerMatcher {
         
         private AddsDataTable tableAdds;
         
-        private PasswordsDataTable tablePasswords;
+        private ProfilesDataTable tableProfiles;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -59,8 +59,8 @@ namespace PartnerMatcher {
                 if ((ds.Tables["Adds"] != null)) {
                     base.Tables.Add(new AddsDataTable(ds.Tables["Adds"]));
                 }
-                if ((ds.Tables["Passwords"] != null)) {
-                    base.Tables.Add(new PasswordsDataTable(ds.Tables["Passwords"]));
+                if ((ds.Tables["Profiles"] != null)) {
+                    base.Tables.Add(new ProfilesDataTable(ds.Tables["Profiles"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace PartnerMatcher {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PasswordsDataTable Passwords {
+        public ProfilesDataTable Profiles {
             get {
-                return this.tablePasswords;
+                return this.tableProfiles;
             }
         }
         
@@ -170,8 +170,8 @@ namespace PartnerMatcher {
                 if ((ds.Tables["Adds"] != null)) {
                     base.Tables.Add(new AddsDataTable(ds.Tables["Adds"]));
                 }
-                if ((ds.Tables["Passwords"] != null)) {
-                    base.Tables.Add(new PasswordsDataTable(ds.Tables["Passwords"]));
+                if ((ds.Tables["Profiles"] != null)) {
+                    base.Tables.Add(new ProfilesDataTable(ds.Tables["Profiles"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace PartnerMatcher {
                     this.tableAdds.InitVars();
                 }
             }
-            this.tablePasswords = ((PasswordsDataTable)(base.Tables["Passwords"]));
+            this.tableProfiles = ((ProfilesDataTable)(base.Tables["Profiles"]));
             if ((initTable == true)) {
-                if ((this.tablePasswords != null)) {
-                    this.tablePasswords.InitVars();
+                if ((this.tableProfiles != null)) {
+                    this.tableProfiles.InitVars();
                 }
             }
         }
@@ -230,8 +230,8 @@ namespace PartnerMatcher {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAdds = new AddsDataTable();
             base.Tables.Add(this.tableAdds);
-            this.tablePasswords = new PasswordsDataTable();
-            base.Tables.Add(this.tablePasswords);
+            this.tableProfiles = new ProfilesDataTable();
+            base.Tables.Add(this.tableProfiles);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace PartnerMatcher {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializePasswords() {
+        private bool ShouldSerializeProfiles() {
             return false;
         }
         
@@ -305,7 +305,7 @@ namespace PartnerMatcher {
         public delegate void AddsRowChangeEventHandler(object sender, AddsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void PasswordsRowChangeEventHandler(object sender, PasswordsRowChangeEvent e);
+        public delegate void ProfilesRowChangeEventHandler(object sender, ProfilesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -618,16 +618,16 @@ namespace PartnerMatcher {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PasswordsDataTable : global::System.Data.TypedTableBase<PasswordsRow> {
+        public partial class ProfilesDataTable : global::System.Data.TypedTableBase<ProfilesRow> {
             
-            private global::System.Data.DataColumn columnUserName;
+            private global::System.Data.DataColumn columnmail;
             
             private global::System.Data.DataColumn columnPassword;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsDataTable() {
-                this.TableName = "Passwords";
+            public ProfilesDataTable() {
+                this.TableName = "Profiles";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -635,7 +635,7 @@ namespace PartnerMatcher {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal PasswordsDataTable(global::System.Data.DataTable table) {
+            internal ProfilesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -652,16 +652,16 @@ namespace PartnerMatcher {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected PasswordsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProfilesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn UserNameColumn {
+            public global::System.Data.DataColumn mailColumn {
                 get {
-                    return this.columnUserName;
+                    return this.columnmail;
                 }
             }
             
@@ -684,53 +684,53 @@ namespace PartnerMatcher {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsRow this[int index] {
+            public ProfilesRow this[int index] {
                 get {
-                    return ((PasswordsRow)(this.Rows[index]));
+                    return ((ProfilesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PasswordsRowChangeEventHandler PasswordsRowChanging;
+            public event ProfilesRowChangeEventHandler ProfilesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PasswordsRowChangeEventHandler PasswordsRowChanged;
+            public event ProfilesRowChangeEventHandler ProfilesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PasswordsRowChangeEventHandler PasswordsRowDeleting;
+            public event ProfilesRowChangeEventHandler ProfilesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PasswordsRowChangeEventHandler PasswordsRowDeleted;
+            public event ProfilesRowChangeEventHandler ProfilesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddPasswordsRow(PasswordsRow row) {
+            public void AddProfilesRow(ProfilesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsRow AddPasswordsRow(string Password) {
-                PasswordsRow rowPasswordsRow = ((PasswordsRow)(this.NewRow()));
+            public ProfilesRow AddProfilesRow(string Password) {
+                ProfilesRow rowProfilesRow = ((ProfilesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Password};
-                rowPasswordsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPasswordsRow);
-                return rowPasswordsRow;
+                rowProfilesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProfilesRow);
+                return rowProfilesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsRow FindByUserName(int UserName) {
-                return ((PasswordsRow)(this.Rows.Find(new object[] {
-                            UserName})));
+            public ProfilesRow FindBymail(int mail) {
+                return ((ProfilesRow)(this.Rows.Find(new object[] {
+                            mail})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PasswordsDataTable cln = ((PasswordsDataTable)(base.Clone()));
+                ProfilesDataTable cln = ((ProfilesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -738,57 +738,57 @@ namespace PartnerMatcher {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PasswordsDataTable();
+                return new ProfilesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnUserName = base.Columns["UserName"];
+                this.columnmail = base.Columns["mail"];
                 this.columnPassword = base.Columns["Password"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserName);
+                this.columnmail = new global::System.Data.DataColumn("mail", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmail);
                 this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassword);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnUserName}, true));
-                this.columnUserName.AutoIncrement = true;
-                this.columnUserName.AutoIncrementSeed = -1;
-                this.columnUserName.AutoIncrementStep = -1;
-                this.columnUserName.AllowDBNull = false;
-                this.columnUserName.Unique = true;
+                                this.columnmail}, true));
+                this.columnmail.AutoIncrement = true;
+                this.columnmail.AutoIncrementSeed = -1;
+                this.columnmail.AutoIncrementStep = -1;
+                this.columnmail.AllowDBNull = false;
+                this.columnmail.Unique = true;
                 this.columnPassword.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsRow NewPasswordsRow() {
-                return ((PasswordsRow)(this.NewRow()));
+            public ProfilesRow NewProfilesRow() {
+                return ((ProfilesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PasswordsRow(builder);
+                return new ProfilesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PasswordsRow);
+                return typeof(ProfilesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PasswordsRowChanged != null)) {
-                    this.PasswordsRowChanged(this, new PasswordsRowChangeEvent(((PasswordsRow)(e.Row)), e.Action));
+                if ((this.ProfilesRowChanged != null)) {
+                    this.ProfilesRowChanged(this, new ProfilesRowChangeEvent(((ProfilesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -796,8 +796,8 @@ namespace PartnerMatcher {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PasswordsRowChanging != null)) {
-                    this.PasswordsRowChanging(this, new PasswordsRowChangeEvent(((PasswordsRow)(e.Row)), e.Action));
+                if ((this.ProfilesRowChanging != null)) {
+                    this.ProfilesRowChanging(this, new ProfilesRowChangeEvent(((ProfilesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -805,8 +805,8 @@ namespace PartnerMatcher {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PasswordsRowDeleted != null)) {
-                    this.PasswordsRowDeleted(this, new PasswordsRowChangeEvent(((PasswordsRow)(e.Row)), e.Action));
+                if ((this.ProfilesRowDeleted != null)) {
+                    this.ProfilesRowDeleted(this, new ProfilesRowChangeEvent(((ProfilesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -814,14 +814,14 @@ namespace PartnerMatcher {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PasswordsRowDeleting != null)) {
-                    this.PasswordsRowDeleting(this, new PasswordsRowChangeEvent(((PasswordsRow)(e.Row)), e.Action));
+                if ((this.ProfilesRowDeleting != null)) {
+                    this.ProfilesRowDeleting(this, new ProfilesRowChangeEvent(((ProfilesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovePasswordsRow(PasswordsRow row) {
+            public void RemoveProfilesRow(ProfilesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -848,7 +848,7 @@ namespace PartnerMatcher {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PasswordsDataTable";
+                attribute2.FixedValue = "ProfilesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1002,25 +1002,25 @@ namespace PartnerMatcher {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PasswordsRow : global::System.Data.DataRow {
+        public partial class ProfilesRow : global::System.Data.DataRow {
             
-            private PasswordsDataTable tablePasswords;
+            private ProfilesDataTable tableProfiles;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal PasswordsRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProfilesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePasswords = ((PasswordsDataTable)(this.Table));
+                this.tableProfiles = ((ProfilesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int UserName {
+            public int mail {
                 get {
-                    return ((int)(this[this.tablePasswords.UserNameColumn]));
+                    return ((int)(this[this.tableProfiles.mailColumn]));
                 }
                 set {
-                    this[this.tablePasswords.UserNameColumn] = value;
+                    this[this.tableProfiles.mailColumn] = value;
                 }
             }
             
@@ -1029,27 +1029,27 @@ namespace PartnerMatcher {
             public string Password {
                 get {
                     try {
-                        return ((string)(this[this.tablePasswords.PasswordColumn]));
+                        return ((string)(this[this.tableProfiles.PasswordColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'Passwords\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'Profiles\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePasswords.PasswordColumn] = value;
+                    this[this.tableProfiles.PasswordColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPasswordNull() {
-                return this.IsNull(this.tablePasswords.PasswordColumn);
+                return this.IsNull(this.tableProfiles.PasswordColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPasswordNull() {
-                this[this.tablePasswords.PasswordColumn] = global::System.Convert.DBNull;
+                this[this.tableProfiles.PasswordColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1091,22 +1091,22 @@ namespace PartnerMatcher {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class PasswordsRowChangeEvent : global::System.EventArgs {
+        public class ProfilesRowChangeEvent : global::System.EventArgs {
             
-            private PasswordsRow eventRow;
+            private ProfilesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsRowChangeEvent(PasswordsRow row, global::System.Data.DataRowAction action) {
+            public ProfilesRowChangeEvent(ProfilesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PasswordsRow Row {
+            public ProfilesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1497,7 +1497,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PasswordsTableAdapter : global::System.ComponentModel.Component {
+    public partial class ProfilesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -1511,7 +1511,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public PasswordsTableAdapter() {
+        public ProfilesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1608,30 +1608,30 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Passwords";
-            tableMapping.ColumnMappings.Add("UserName", "UserName");
+            tableMapping.DataSetTable = "Profiles";
+            tableMapping.ColumnMappings.Add("mail", "mail");
             tableMapping.ColumnMappings.Add("Password", "Password");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Passwords` WHERE ((`UserName` = ?) AND ((? = 1 AND `Password` IS NUL" +
-                "L) OR (`Password` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Profiles` WHERE ((`mail` = ?) AND ((? = 1 AND `Password` IS NULL) OR" +
+                " (`Password` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_mail", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mail", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Passwords` (`Password`) VALUES (?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Profiles` (`Password`) VALUES (?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Passwords` SET `Password` = ? WHERE ((`UserName` = ?) AND ((? = 1 AND `Pa" +
-                "ssword` IS NULL) OR (`Password` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Profiles` SET `Password` = ? WHERE ((`mail` = ?) AND ((? = 1 AND `Passwor" +
+                "d` IS NULL) OR (`Password` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_mail", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "mail", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
         }
@@ -1649,7 +1649,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UserName, [Password] FROM Passwords";
+            this._commandCollection[0].CommandText = "SELECT mail, [Password] FROM Profiles";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1657,7 +1657,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DatabaseDataSet.PasswordsDataTable dataTable) {
+        public virtual int Fill(DatabaseDataSet.ProfilesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1670,9 +1670,9 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DatabaseDataSet.PasswordsDataTable GetData() {
+        public virtual DatabaseDataSet.ProfilesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DatabaseDataSet.PasswordsDataTable dataTable = new DatabaseDataSet.PasswordsDataTable();
+            DatabaseDataSet.ProfilesDataTable dataTable = new DatabaseDataSet.ProfilesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1680,7 +1680,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DatabaseDataSet.PasswordsDataTable dataTable) {
+        public virtual int Update(DatabaseDataSet.ProfilesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1688,7 +1688,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DatabaseDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Passwords");
+            return this.Adapter.Update(dataSet, "Profiles");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1710,8 +1710,8 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_UserName, string Original_Password) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UserName));
+        public virtual int Delete(int Original_mail, string Original_Password) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_mail));
             if ((Original_Password == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1767,14 +1767,14 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Password, int Original_UserName, string Original_Password) {
+        public virtual int Update(string Password, int Original_mail, string Original_Password) {
             if ((Password == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Password));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_UserName));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_mail));
             if ((Original_Password == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -1814,7 +1814,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         
         private AddsTableAdapter _addsTableAdapter;
         
-        private PasswordsTableAdapter _passwordsTableAdapter;
+        private ProfilesTableAdapter _profilesTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1850,12 +1850,12 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public PasswordsTableAdapter PasswordsTableAdapter {
+        public ProfilesTableAdapter ProfilesTableAdapter {
             get {
-                return this._passwordsTableAdapter;
+                return this._profilesTableAdapter;
             }
             set {
-                this._passwordsTableAdapter = value;
+                this._profilesTableAdapter = value;
             }
         }
         
@@ -1882,9 +1882,9 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                             && (this._addsTableAdapter.Connection != null))) {
                     return this._addsTableAdapter.Connection;
                 }
-                if (((this._passwordsTableAdapter != null) 
-                            && (this._passwordsTableAdapter.Connection != null))) {
-                    return this._passwordsTableAdapter.Connection;
+                if (((this._profilesTableAdapter != null) 
+                            && (this._profilesTableAdapter.Connection != null))) {
+                    return this._profilesTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1902,7 +1902,7 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                 if ((this._addsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._passwordsTableAdapter != null)) {
+                if ((this._profilesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1925,12 +1925,12 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._passwordsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Passwords.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._profilesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Profiles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._passwordsTableAdapter.Update(updatedRows));
+                    result = (result + this._profilesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1952,11 +1952,11 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._passwordsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Passwords.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._profilesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Profiles.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._passwordsTableAdapter.Update(addedRows));
+                    result = (result + this._profilesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1970,11 +1970,11 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._passwordsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Passwords.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._profilesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Profiles.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._passwordsTableAdapter.Update(deletedRows));
+                    result = (result + this._profilesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -2030,8 +2030,8 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._passwordsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._passwordsTableAdapter.Connection) == false))) {
+            if (((this._profilesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._profilesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -2076,13 +2076,13 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._addsTableAdapter.Adapter);
                     }
                 }
-                if ((this._passwordsTableAdapter != null)) {
-                    revertConnections.Add(this._passwordsTableAdapter, this._passwordsTableAdapter.Connection);
-                    this._passwordsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._passwordsTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._passwordsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._passwordsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._passwordsTableAdapter.Adapter);
+                if ((this._profilesTableAdapter != null)) {
+                    revertConnections.Add(this._profilesTableAdapter, this._profilesTableAdapter.Connection);
+                    this._profilesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._profilesTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._profilesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._profilesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._profilesTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -2147,9 +2147,9 @@ namespace PartnerMatcher.DatabaseDataSetTableAdapters {
                     this._addsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._addsTableAdapter]));
                     this._addsTableAdapter.Transaction = null;
                 }
-                if ((this._passwordsTableAdapter != null)) {
-                    this._passwordsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._passwordsTableAdapter]));
-                    this._passwordsTableAdapter.Transaction = null;
+                if ((this._profilesTableAdapter != null)) {
+                    this._profilesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._profilesTableAdapter]));
+                    this._profilesTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PartnerMatcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="510.833" Width="558.167">
+    <Grid Height="321" Margin="0,0,-0.333,-0.333" VerticalAlignment="Top">
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="395,10,0,0" VerticalAlignment="Top" Width="100">
             <StackPanel Height="40
                         " Orientation="Horizontal" >
@@ -36,7 +36,12 @@
             </StackPanel>
         </StackPanel>
         <Image x:Name="image" HorizontalAlignment="Left" Height="225" VerticalAlignment="Top" Width="300" Source="pics/newLogo.png" Stretch="Fill" Margin="65,-40,0,0"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="340,170,0,0" VerticalAlignment="Top" Width="100" Source="pics/partners.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="420,360,0,-139" VerticalAlignment="Top" Width="100" Source="pics/partners.png"/>
+        <StackPanel HorizontalAlignment="Left" Height="75" Margin="400,135,0,0" VerticalAlignment="Top" Width="105">
+            <Button x:Name="myAddsBtn" Content="My Adds"/>
+            <Button x:Name="myActivitiesBtn" Content="My Activities"/>
+            <Button x:Name="myApplicationsBtn" Content="My Applications"/>
+        </StackPanel>
 
 
     </Grid>

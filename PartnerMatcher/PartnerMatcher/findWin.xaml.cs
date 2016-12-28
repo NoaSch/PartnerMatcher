@@ -23,38 +23,27 @@ namespace PartnerMatcher
     {
         string chosenKind;
         string chosenArea;
-        List<string> areas;
-        List<string> kinds;
+        public BusLogic busLogic;
 
         OleDbConnection con;
         DataTable dt;
-        public findWin()
-        {
 
+        public findWin(BusLogic buslog)
+        {
+            busLogic = buslog;
             InitializeComponent();
-            addLists();
+            comboBoxKind.ItemsSource = busLogic.kinds.Keys.ToList();
+            comboBoxArea.ItemsSource = busLogic.areas;
             lblCount.Visibility = System.Windows.Visibility.Hidden;
             gvData.Visibility = System.Windows.Visibility.Hidden;
+            gvDataFree.Visibility = System.Windows.Visibility.Hidden;
 
             con = new OleDbConnection();
             con.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
 
         }
 
-        private void addLists()
-        {
-            areas = new List<string>();
-            string[] areasArr = { "South", "North", "Center", "Sharon", "Eilat" };
-            areas.AddRange(areasArr);
-            comboBoxArea.ItemsSource = areas;
 
-
-            kinds = new List<string>();
-            string[] kindsArr = { "Apartment", "Sport", "Date", "Travel", "Exams" };
-            kinds.AddRange(kindsArr);
-            comboBoxKind.ItemsSource = kinds;
-
-        }
 
         private void comboBoxKind_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -74,28 +63,58 @@ namespace PartnerMatcher
 
         private void BindGrid()
         {
+            bool found = false;
             OleDbCommand cmd = new OleDbCommand();
             if (con.State != ConnectionState.Open)
                 con.Open();
             cmd.Connection = con;
+            string tableName = this.busLogic.kinds[chosenKind];
             // cmd.CommandText = "select * from tbEmp";
             //cmd.CommandText = "SELECT * from Adds WHERE  Loc ='" + chosenArea.Trim() + "'  AND Kind = '" + chosenKind.Trim() + "'";
-            cmd.CommandText = "SELECT  Kind, Loc, Content from Adds WHERE Loc = '" + chosenArea.Trim() + "'  AND Kind = '" + chosenKind + "'";
+            //  cmd.CommandText = "SELECT Loc, Content from " + tableName + " WHERE Loc = '" + chosenArea.Trim() + "'"; //?? chose what to show
+            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'"; //?? chose what to show
 
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
+            dt.Columns.Remove("mail");
+            dt.Columns.Remove("Payed");
+            dt.Columns.Remove("addID");
             gvData.ItemsSource = dt.AsDataView();
+
 
             if (dt.Rows.Count > 0)
             {
+                found = true;
                 lblCount.Visibility = System.Windows.Visibility.Hidden;
                 gvData.Visibility = System.Windows.Visibility.Visible;
+
             }
             else
             {
-                lblCount.Visibility = System.Windows.Visibility.Visible;
                 gvData.Visibility = System.Windows.Visibility.Hidden;
+            }
+            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'"; //?? chose what to show
+
+            da = new OleDbDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            dt.Columns.Remove("mail");
+            dt.Columns.Remove("Payed");
+            dt.Columns.Remove("addID");
+            gvDataFree.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+
+                gvDataFree.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else if (!found)
+            {
+                lblCount.Visibility = System.Windows.Visibility.Visible;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
             }
 
         }
@@ -103,6 +122,21 @@ namespace PartnerMatcher
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.MessageBox.Show("Not implemented yed");
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+        }
+
+        private void button1_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+        }
+
+        private void gvData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

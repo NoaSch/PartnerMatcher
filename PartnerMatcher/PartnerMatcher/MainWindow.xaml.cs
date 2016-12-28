@@ -20,10 +20,13 @@ namespace PartnerMatcher
     /// </summary>
     public partial class MainWindow : Window
     {
+        BusLogic model;
         public MainWindow()
         {
             InitializeComponent();
             Console.WriteLine("test");
+            model = new BusLogic();
+
         }
 
         private void sign_Click(object sender, RoutedEventArgs e)
@@ -31,7 +34,7 @@ namespace PartnerMatcher
             connWin cw = new connWin();
             cw.ShowDialog();
             if (cw.conf == true)
-                userName.Content = cw.Username;
+                userName.Content = cw.usr;
 
         }
 
@@ -51,11 +54,27 @@ namespace PartnerMatcher
 
         private void findBtn_Click(object sender, RoutedEventArgs e)
         {
-            findWin fw = new findWin();
+            findWin fw = new findWin(model);
+            //fw.busLogic = ;
             fw.ShowDialog();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+        }
+
+        private void myAddsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+        }
+
+        private void myActivitiesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yed");
+        }
+
+        private void myApplicationsBtn_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.MessageBox.Show("Not implemented yed");
         }
