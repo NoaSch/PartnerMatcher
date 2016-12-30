@@ -27,6 +27,11 @@ namespace PartnerMatcher
         bool? smoke;
         public string mail;
         public string pass;
+        bool? kosher;
+        bool? quiet;
+        bool? animals;
+        bool? play;
+
         public AddProfileWin()
         {
             InitializeComponent();
@@ -47,6 +52,10 @@ namespace PartnerMatcher
             {
                 name = nameTextBox.Text;
                 smoke = checkBoxSmoke.IsChecked;
+                kosher = checkBoxKosher.IsChecked;
+                quiet = checkBoxquiet.IsChecked;
+                animals = checkBoxAnimals.IsChecked;
+                play = checkBoxPlay.IsChecked;
                 OleDbConnection conn = new OleDbConnection();
 
                 // conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\noa\Dropbox\תיקייה משותפת ניתוץ\עבודה 3\GUI\PartnerMatcher\PartnerMatcher\Database.mdb"
@@ -58,7 +67,7 @@ namespace PartnerMatcher
                 //OleDbCommand cmd = new OleDbCommand("INSERT into Profiles (mail, Pass) values(@mail, @Pass)");
                 OleDbCommand cmd = new OleDbCommand();
                 // cmd.CommandText = "INSERT into Profiles (mail, Pass) values(" + mail + ", " + Pass + ")";
-                cmd.CommandText = "INSERT into Profiles (mail, Pass, age, smoke, fullName) values(@mail, @Pass,@age, @smoke,@name)";
+                cmd.CommandText = "INSERT into Profiles (mail, Pass, age, smoke, fullName, kosher, quiet, animals, play) values(@mail, @Pass,@age, @smoke,@name, @kosher, @quiet,@animals,@play)";
                 cmd.Connection = conn;
 
                 conn.Open();
@@ -70,11 +79,29 @@ namespace PartnerMatcher
                     cmd.Parameters.Add("@age", OleDbType.Integer).Value = age;
                     cmd.Parameters.Add("@smoke", OleDbType.Boolean).Value = smoke;
                     cmd.Parameters.Add("@name", OleDbType.VarChar).Value = name;
+                    cmd.Parameters.Add("@kosher", OleDbType.Boolean).Value = kosher;
+                    cmd.Parameters.Add("@quiet", OleDbType.Boolean).Value = quiet;
+                    cmd.Parameters.Add("@animals", OleDbType.Boolean).Value = animals;
+                    cmd.Parameters.Add("@play", OleDbType.Boolean).Value = play;
 
                     try
                     {
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("User Added");
+                        MailMessage mailMsg = new MailMessage();
+                        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                        mailMsg.From = new MailAddress("partnersmatcherapp@gmail.com");
+                        mailMsg.To.Add(mail);
+                        mailMsg.Subject = name + ", Welcome to Paartners Matcher";
+                        mailMsg.Body = "wish you to find the second part of your Activity";
+
+                        SmtpServer.Port = 587;
+                        SmtpServer.Credentials = new System.Net.NetworkCredential("partnersmatcherapp@gmail.com", "p12345678");
+                        SmtpServer.EnableSsl = true;
+
+                        SmtpServer.Send(mailMsg);
+                        MessageBox.Show("User Created");
                         /*MailMessage mailMsg = new MailMessage("PartnersMatcher@gmail.com", mail);
                         SmtpClient client = new SmtpClient();
                         client.Port = 25;
@@ -98,8 +125,9 @@ namespace PartnerMatcher
                 }
                 else
                 {
-                    MessageBox.Show("Connection Failed");
+                    MessageBox.Show("DB Error call support");
                 }
+                Close();
             }
         }
     }

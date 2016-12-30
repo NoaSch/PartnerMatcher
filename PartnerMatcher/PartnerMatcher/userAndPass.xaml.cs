@@ -37,6 +37,11 @@ namespace PartnerMatcher
 
             }
 
+            else if (checkExistMail(mailTxt.Text))
+            {
+                System.Windows.MessageBox.Show("Thish e-mail already in the system", "Error");
+
+            }
             else
             {
                 string mail = mailTxt.Text;
@@ -45,8 +50,8 @@ namespace PartnerMatcher
                 apw.mail = mail;
                 apw.pass = Pass;
                 apw.ShowDialog();
-
             }
+
 
             /*   {
                   OleDbConnection conn = new OleDbConnection();
@@ -103,7 +108,30 @@ namespace PartnerMatcher
                    }
                }*/
         }
-    }
 
+        private bool checkExistMail(string text)
+        {
+            OleDbConnection conn = new OleDbConnection();
+
+            // conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\noa\Dropbox\תיקייה משותפת ניתוץ\עבודה 3\GUI\PartnerMatcher\PartnerMatcher\Database.mdb"
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+            conn.Open();
+            OleDbDataReader reader = null;
+            //  OleDbDataAdapter da = new OleDbDataAdapter("select  * from tblmedic where medicalschool ='" + combobox.text.ToString().Trim() + "'", conn);
+
+            OleDbCommand command = new OleDbCommand("SELECT * from Profiles WHERE  mail ='" + mailTxt.Text.ToString().Trim() + "'", conn);
+            // OleDbCommand command = new OleDbCommand("SELECT * from  Profiles WHERE mail='@1'", conn);
+            //command.Parameters.AddWithValue("@1", mail);
+            reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
+
+    }
 }
 

@@ -36,12 +36,3 @@ namespace PartnerMatcher
     }
 }
 
-/* var busLogic = new BusLogic();
-       busLogic.PopulateListBoxItems(textBox8.Text);          
-listBox1.Items.Clear();
-       ListboxItems.DataSource = busLogic.ListboxItems;
-* 
-}
-}
-}
-*/

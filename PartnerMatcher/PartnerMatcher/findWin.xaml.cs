@@ -69,10 +69,7 @@ namespace PartnerMatcher
                 con.Open();
             cmd.Connection = con;
             string tableName = this.busLogic.kinds[chosenKind];
-            // cmd.CommandText = "select * from tbEmp";
-            //cmd.CommandText = "SELECT * from Adds WHERE  Loc ='" + chosenArea.Trim() + "'  AND Kind = '" + chosenKind.Trim() + "'";
-            //  cmd.CommandText = "SELECT Loc, Content from " + tableName + " WHERE Loc = '" + chosenArea.Trim() + "'"; //?? chose what to show
-            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'"; //?? chose what to show
+            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'";
 
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
@@ -94,7 +91,7 @@ namespace PartnerMatcher
             {
                 gvData.Visibility = System.Windows.Visibility.Hidden;
             }
-            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'"; //?? chose what to show
+            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'";
 
             da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
@@ -121,17 +118,17 @@ namespace PartnerMatcher
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
 
         private void button1_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
 
         private void gvData_SelectionChanged(object sender, SelectionChangedEventArgs e)

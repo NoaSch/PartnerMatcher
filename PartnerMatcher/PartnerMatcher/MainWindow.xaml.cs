@@ -48,7 +48,7 @@ namespace PartnerMatcher
 
         private void postButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
 
         }
 
@@ -61,22 +61,33 @@ namespace PartnerMatcher
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
 
         private void myAddsBtn_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
 
         private void myActivitiesBtn_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
 
         private void myApplicationsBtn_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yed");
+            System.Windows.MessageBox.Show("Not implemented yet");
+        }
+
+
+        private void PrefernecesBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yet");
+        }
+
+        private void myApplicationsBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("Not implemented yet");
         }
     }
 }
