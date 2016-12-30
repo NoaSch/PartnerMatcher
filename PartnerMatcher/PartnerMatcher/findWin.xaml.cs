@@ -60,23 +60,33 @@ namespace PartnerMatcher
             BindGrid();
         }
 
-
+        //find all matches in the db 
         private void BindGrid()
         {
+            if (chosenKind == null)
+            {
+                MessageBox.Show("Please select kind of activity");
+                return;
+            }
+
             bool found = false;
             OleDbCommand cmd = new OleDbCommand();
             if (con.State != ConnectionState.Open)
                 con.Open();
             cmd.Connection = con;
+
             string tableName = this.busLogic.kinds[chosenKind];
-            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'";
+            if (chosenArea == null)
+                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True";
+            else
+
+                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'";
 
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
-            dt.Columns.Remove("mail");
-            dt.Columns.Remove("Payed");
-            dt.Columns.Remove("addID");
+            deleteCols();
+            //draw the results as a table
             gvData.ItemsSource = dt.AsDataView();
 
 
@@ -91,14 +101,15 @@ namespace PartnerMatcher
             {
                 gvData.Visibility = System.Windows.Visibility.Hidden;
             }
-            cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'";
+            if (chosenArea == null)
+                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False";
+            else
+                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'";
 
             da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
-            dt.Columns.Remove("mail");
-            dt.Columns.Remove("Payed");
-            dt.Columns.Remove("addID");
+            deleteCols();
             gvDataFree.ItemsSource = dt.AsDataView();
 
 
@@ -114,6 +125,19 @@ namespace PartnerMatcher
                 gvDataFree.Visibility = System.Windows.Visibility.Hidden;
             }
 
+        }
+
+
+        private void deleteCols()
+        {
+            dt.Columns.Remove("mail");
+            dt.Columns.Remove("Payed");
+            dt.Columns.Remove("addID");
+            dt.Columns.Remove("smoke");
+            dt.Columns.Remove("kosher");
+            dt.Columns.Remove("quiet");
+            dt.Columns.Remove("animals");
+            dt.Columns.Remove("play");
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

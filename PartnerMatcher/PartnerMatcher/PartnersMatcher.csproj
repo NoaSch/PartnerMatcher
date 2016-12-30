@@ -66,8 +66,8 @@
       <DependentUpon>findWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="MapToDb.cs" />
-    <Compile Include="userAndPass.xaml.cs">
-      <DependentUpon>userAndPass.xaml</DependentUpon>
+    <Compile Include="createUser.xaml.cs">
+      <DependentUpon>createUser.xaml</DependentUpon>
     </Compile>
     <Page Include="AddProfileWin.xaml">
       <SubType>Designer</SubType>
@@ -98,7 +98,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="userAndPass.xaml">
+    <Page Include="createUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

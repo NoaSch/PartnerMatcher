@@ -50,6 +50,7 @@ namespace PartnerMatcher
             }
             else
             {
+                //get all matching rows
                 name = nameTextBox.Text;
                 smoke = checkBoxSmoke.IsChecked;
                 kosher = checkBoxKosher.IsChecked;
@@ -57,16 +58,8 @@ namespace PartnerMatcher
                 animals = checkBoxAnimals.IsChecked;
                 play = checkBoxPlay.IsChecked;
                 OleDbConnection conn = new OleDbConnection();
-
-                // conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\noa\Dropbox\תיקייה משותפת ניתוץ\עבודה 3\GUI\PartnerMatcher\PartnerMatcher\Database.mdb"
                 conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
-
-
-
-
-                //OleDbCommand cmd = new OleDbCommand("INSERT into Profiles (mail, Pass) values(@mail, @Pass)");
                 OleDbCommand cmd = new OleDbCommand();
-                // cmd.CommandText = "INSERT into Profiles (mail, Pass) values(" + mail + ", " + Pass + ")";
                 cmd.CommandText = "INSERT into Profiles (mail, Pass, age, smoke, fullName, kosher, quiet, animals, play) values(@mail, @Pass,@age, @smoke,@name, @kosher, @quiet,@animals,@play)";
                 cmd.Connection = conn;
 
@@ -86,8 +79,8 @@ namespace PartnerMatcher
 
                     try
                     {
+                        //send the mail to the user's mail
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("User Added");
                         MailMessage mailMsg = new MailMessage();
                         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
@@ -102,16 +95,6 @@ namespace PartnerMatcher
 
                         SmtpServer.Send(mailMsg);
                         MessageBox.Show("User Created");
-                        /*MailMessage mailMsg = new MailMessage("PartnersMatcher@gmail.com", mail);
-                        SmtpClient client = new SmtpClient();
-                        client.Port = 25;
-                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                        client.UseDefaultCredentials = false;
-                        client.Host = "smtp.google.com";
-                        mailMsg.Subject = "this is a test email.";
-                        mailMsg.Body = "this is my test email body";
-
-                        client.Send(mailMsg);*/
                         conn.Close();
                     }
                     catch (OleDbException ex)

@@ -20,13 +20,13 @@
         <Button x:Name="button" Content="find" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="345,30,0,0" Click="button_Click"/>
 
 
-        <StackPanel HorizontalAlignment="Left" Height="110" Margin="24,80,0,0" VerticalAlignment="Top" Width="370">
+        <StackPanel HorizontalAlignment="Left" Height="110" Margin="24,80,0,0" VerticalAlignment="Top" Width="600">
             <Label Content="No records found." x:Name="lblCount" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Foreground="#FFE10000" Margin="0,0"/>
             <WrapPanel Margin="10" HorizontalAlignment="Center">
                 <DataGrid AutoGenerateColumns="True"  x:Name="gvData" SelectionMode="Single" FontSize="10" Padding="5" Background="Black" CanUserResizeColumns="True" CanUserSortColumns="True" IsReadOnly="True"  ItemsSource="{Binding}" CanUserAddRows="False" SelectionChanged="gvData_SelectionChanged"/>
             </WrapPanel>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="195" Margin="25,190,0,0" VerticalAlignment="Top" Width="370">
+        <StackPanel HorizontalAlignment="Left" Height="195" Margin="25,190,0,0" VerticalAlignment="Top" Width="600">
             <WrapPanel Margin="10" HorizontalAlignment="Center">
                 <DataGrid AutoGenerateColumns="True"  x:Name="gvDataFree" SelectionMode="Single" FontSize="10" Padding="5" Background="Black" CanUserResizeColumns="True" CanUserSortColumns="True" IsReadOnly="True"  ItemsSource="{Binding}" CanUserAddRows="False"/>
             </WrapPanel>
