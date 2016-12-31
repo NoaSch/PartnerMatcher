@@ -65,7 +65,6 @@
     <Compile Include="findWin.xaml.cs">
       <DependentUpon>findWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapToDb.cs" />
     <Compile Include="createUser.xaml.cs">
       <DependentUpon>createUser.xaml</DependentUpon>
     </Compile>
