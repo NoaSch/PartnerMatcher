@@ -43,7 +43,7 @@
                 <CheckBox x:Name="checkBoxAnimals" Content="Like Animals" Margin="0,0,0,-0.333"/>
             </StackPanel>
             <StackPanel Height="35" Orientation="Horizontal">
-                <CheckBox x:Name="checkBoxPlay">
+                <CheckBox x:Name="checkBoxPlay" Content="Play an instrument">
 
                 </CheckBox>
             </StackPanel>
