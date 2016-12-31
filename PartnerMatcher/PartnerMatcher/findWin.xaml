@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PartnerMatcher"
         mc:Ignorable="d"
-        Title="findWin" Height="500" Width="723.333">
+        Title="findWin" Height="641" Width="723.333">
     <Grid Margin="0,0,-4.667,-0.333">
         <StackPanel HorizontalAlignment="Left" Height="100" Orientation="Horizontal"  VerticalAlignment="Top" Width="285">
             <StackPanel Height="100" Width="140" Margin="0,0,5,0 ">
@@ -26,14 +26,14 @@
                 <DataGrid AutoGenerateColumns="True"  x:Name="gvData" SelectionMode="Single" FontSize="10" Padding="5" Background="Black" CanUserResizeColumns="True" CanUserSortColumns="True" IsReadOnly="True"  ItemsSource="{Binding}" CanUserAddRows="False" SelectionChanged="gvData_SelectionChanged"/>
             </WrapPanel>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="195" Margin="25,190,0,0" VerticalAlignment="Top" Width="600">
+        <StackPanel HorizontalAlignment="Left" Height="195" Margin="25,245,0,0" VerticalAlignment="Top" Width="600">
             <WrapPanel Margin="10" HorizontalAlignment="Center">
                 <DataGrid AutoGenerateColumns="True"  x:Name="gvDataFree" SelectionMode="Single" FontSize="10" Padding="5" Background="Black" CanUserResizeColumns="True" CanUserSortColumns="True" IsReadOnly="True"  ItemsSource="{Binding}" CanUserAddRows="False"/>
             </WrapPanel>
         </StackPanel>
-        <Button x:Name="appBtn" Content="Apply for this activity" HorizontalAlignment="Left" Margin="90,400,0,0" VerticalAlignment="Top" Width="125" Height="40" Click="button1_Click"/>
+        <Button x:Name="appBtn" Content="Apply for this activity" HorizontalAlignment="Left" Margin="90,530,0,0" VerticalAlignment="Top" Width="125" Height="40" Click="button1_Click"/>
         <Button x:Name="newTypeBtn" Content="Request for new Type" HorizontalAlignment="Left" Margin="440,30,0,0" VerticalAlignment="Top" Width="145" Height="20" Click="button2_Click" Cursor=""/>
-        <Button x:Name="butDet" Content="View Details" HorizontalAlignment="Left" Margin="260,400,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="button1_Click_1"/>
+        <Button x:Name="butDet" Content="View Details" HorizontalAlignment="Left" Margin="255,530,0,0" VerticalAlignment="Top" Width="95" Height="40" Click="button1_Click_1"/>
 
 
 

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AddProfile" Height="441" Width="300">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="320" Margin="80,35,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5">
+        <StackPanel HorizontalAlignment="Left" Height="320" Margin="40,35,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,8 +40,6 @@
             <StackPanel Height="35" Orientation="Horizontal">
                 <CheckBox x:Name="checkBoxPlay" Content="Play an instrument"/>
             </StackPanel>
-
-            <Label x:Name="labelInterest" Content="Interested In:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" />
         </StackPanel>
         <Button x:Name="finishBtn" Content="Finish" HorizontalAlignment="Left" Margin="105,375,0,0" VerticalAlignment="Top" Width="75" Click="finishBtn_Click"/>
        
