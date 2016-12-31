@@ -13,6 +13,7 @@ namespace PartnerMatcher
     /// </summary>
     public partial class MainWindow : Window
     {
+
         BusLogic model;
         public MainWindow()
         {

@@ -86,7 +86,7 @@ namespace PartnerMatcher
 
                         mailMsg.From = new MailAddress("partnersmatcherapp@gmail.com");
                         mailMsg.To.Add(mail);
-                        mailMsg.Subject = name + ", Welcome to Paartners Matcher";
+                        mailMsg.Subject = name + ", Welcome to Partners Matcher";
                         mailMsg.Body = "wish you to find the second part of your Activity";
 
                         SmtpServer.Port = 587;
