@@ -32,6 +32,7 @@ namespace PartnerMatcher
         bool? animals;
         bool? play;
         string gender;
+        string about;
 
         public AddProfileWin()
         {
@@ -52,8 +53,8 @@ namespace PartnerMatcher
                 System.Windows.MessageBox.Show("Enter a valid age in natural number", "Error");
             }
             else
-
-                gender = comboBoxGen.SelectedValue.ToString();
+                about = textBoxAbout.Text;
+            gender = comboBoxGen.SelectedValue.ToString();
             //get all matching rows
             name = nameTextBox.Text;
             smoke = checkBoxSmoke.IsChecked;
@@ -64,7 +65,7 @@ namespace PartnerMatcher
             OleDbConnection conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = "INSERT into Profiles (mail, Pass, age, gender, smoke, fullName, kosher, quiet, animals, play) values(@mail, @Pass,@age,@gender, @smoke,@name, @kosher, @quiet,@animals,@play)";
+            cmd.CommandText = "INSERT into Profiles (mail, Pass, age, gender, smoke, fullName, kosher, quiet, animals, play,about) values(@mail, @Pass,@age,@gender, @smoke,@name, @kosher, @quiet,@animals,@play,@about)";
             cmd.Connection = conn;
 
             conn.Open();
@@ -81,6 +82,7 @@ namespace PartnerMatcher
                 cmd.Parameters.Add("@quiet", OleDbType.Boolean).Value = quiet;
                 cmd.Parameters.Add("@animals", OleDbType.Boolean).Value = animals;
                 cmd.Parameters.Add("@play", OleDbType.Boolean).Value = play;
+                cmd.Parameters.Add("@about", OleDbType.VarChar).Value = about;
 
                 try
                 {

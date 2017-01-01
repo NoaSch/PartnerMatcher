@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PartnerMatcher"
         mc:Ignorable="d"
-        Title="AddProfile" Height="441" Width="300">
-    <Grid>
+        Title="AddProfile" Height="550.833" Width="300">
+    <Grid Margin="0,0,0.333,-0">
         <StackPanel HorizontalAlignment="Left" Height="320" Margin="40,35,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -48,7 +48,10 @@
                 </CheckBox>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="finishBtn" Content="Finish" HorizontalAlignment="Left" Margin="105,375,0,0" VerticalAlignment="Top" Width="75" Click="finishBtn_Click"/>
+        <Button x:Name="finishBtn" Content="Finish" HorizontalAlignment="Left" Margin="100,480,0,0" VerticalAlignment="Top" Width="75" Click="finishBtn_Click"/>
+        
+        <TextBox x:Name="textBoxAbout" HorizontalAlignment="Left" Height="85" Margin="40,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195"/>
+        <Label x:Name="labelAbout" Content="Additional information:" HorizontalAlignment="Left" Margin="50,335,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>
