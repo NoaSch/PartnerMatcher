@@ -56,16 +56,20 @@ namespace PartnerMatcher
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
+
         {
+            lblCount.Visibility = System.Windows.Visibility.Hidden;
+            gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+            gvData.Visibility = System.Windows.Visibility.Hidden;
             BindGrid();
         }
 
         //find all matches in the db 
         private void BindGrid()
         {
-            if (chosenKind == null)
+            if (chosenKind == null || chosenArea == null)
             {
-                MessageBox.Show("Please select kind of activity");
+                MessageBox.Show("Please select kind of activity and area");
                 return;
             }
 
@@ -127,7 +131,7 @@ namespace PartnerMatcher
 
         }
 
-
+        //remove unnececery colums from the search results
         private void deleteCols()
         {
             dt.Columns.Remove("mail");
@@ -142,17 +146,17 @@ namespace PartnerMatcher
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void button1_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void gvData_SelectionChanged(object sender, SelectionChangedEventArgs e)

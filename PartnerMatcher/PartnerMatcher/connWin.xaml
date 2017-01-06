@@ -7,22 +7,22 @@
         mc:Ignorable="d"
         Title="connWin" Height="300" Width="403.333">
     <Grid>
-        <Grid>
+        <Grid Margin="-2,9,1.667,-9.333">
             <Grid.RowDefinitions>
                 <RowDefinition Height="145*"/>
                 <RowDefinition Height="126*"/>
             </Grid.RowDefinitions>
-            <StackPanel HorizontalAlignment="Left" Height="100" Margin="85,80,0,0" VerticalAlignment="Top" Width="185" Grid.RowSpan="2">
-                <StackPanel Height="30"  Margin="0,0,0,10" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Left" Height="100" Margin="85,80,0,0" VerticalAlignment="Top" Width="257" Grid.RowSpan="2">
+                <StackPanel Height="30"  Margin="0,0,-29.667,10" Orientation="Horizontal">
                     <Label x:Name="usrLbl" Content="e-mail:"/>
-                    <TextBox x:Name="mailTxt" TextWrapping="Wrap" Text="" Width="169" Margin="15,0,0,0"/>
+                    <TextBox x:Name="mailTxt" TextWrapping="Wrap" Text="" Width="184" Margin="15,0,0,0"/>
                 </StackPanel>
                 <StackPanel Height="30" Orientation="Horizontal" Margin="0,0,-70,0">
                     <Label x:Name="passLbl" Content="Password:"/>
-                    <PasswordBox x:Name="passBox" PasswordChar="*" Width="120"/>
+                    <PasswordBox x:Name="passBox" PasswordChar="*" Width="180"/>
                 </StackPanel>
             </StackPanel>
-            <Button x:Name="button" Content="Connect" HorizontalAlignment="Left" Margin="90,45.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Height="40" Click="connect_Click"/>
+            <Button x:Name="button" Content="Connect" HorizontalAlignment="Left" Margin="167,41.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Height="40" Click="connect_Click"/>
 
         </Grid>
     </Grid>

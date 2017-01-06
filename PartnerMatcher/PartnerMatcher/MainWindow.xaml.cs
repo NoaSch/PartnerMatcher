@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 
@@ -13,7 +9,7 @@ namespace PartnerMatcher
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        //the business locic 
         BusLogic model;
         public MainWindow()
         {
@@ -42,7 +38,7 @@ namespace PartnerMatcher
 
         private void postButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
 
         }
 
@@ -54,44 +50,49 @@ namespace PartnerMatcher
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void myAddsBtn_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void myActivitiesBtn_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void myApplicationsBtn_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
 
         private void PrefernecesBtn_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void myApplicationsBtn_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void myAddsBtn_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
 
         private void myActivitiesBtn_Click_1(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Not implemented yet");
+            System.Windows.MessageBox.Show("The Service is Unavailable");
 
+        }
+
+        private void myProfClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("The Service is Unavailable");
         }
     }
 }
