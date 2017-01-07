@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="AddProfile" Height="550.833" Width="300">
     <Grid Margin="0,0,0.333,-0">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/pics/addprofile2.jpg" Stretch="UniformToFill" Opacity="0.3" AlignmentY="Top"/>
+        </Grid.Background>
         <StackPanel HorizontalAlignment="Left" Height="320" Margin="40,35,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>

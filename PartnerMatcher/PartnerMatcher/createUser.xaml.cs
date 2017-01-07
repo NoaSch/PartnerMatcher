@@ -39,7 +39,7 @@ namespace PartnerMatcher
 
             else if (checkExistMail(mailTxt.Text))
             {
-                System.Windows.MessageBox.Show("This E-mail is already in the system", "Error");
+                System.Windows.MessageBox.Show("The e-mail already in the system", "Error");
 
             }
             else
@@ -50,6 +50,7 @@ namespace PartnerMatcher
                 apw.mail = mail;
                 apw.pass = Pass;
                 apw.ShowDialog();
+                this.Close();
             }
 
         }

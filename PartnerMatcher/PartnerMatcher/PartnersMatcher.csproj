@@ -147,6 +147,17 @@
     <Resource Include="pics\newLogo.png" />
     <Resource Include="pics\partners.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\addprofile.jpg" />
+    <Resource Include="pics\connect.jpg" />
+    <Resource Include="pics\find.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\user_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\connect1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
