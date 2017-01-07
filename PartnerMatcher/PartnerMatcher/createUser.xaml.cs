@@ -39,7 +39,7 @@ namespace PartnerMatcher
 
             else if (checkExistMail(mailTxt.Text))
             {
-                System.Windows.MessageBox.Show("The E-mail already in the system", "Error");
+                System.Windows.MessageBox.Show("This E-mail is already in the system", "Error");
 
             }
             else
