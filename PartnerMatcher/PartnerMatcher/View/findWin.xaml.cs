@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PartnerMatcher.Logic;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -14,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PartnerMatcher
+namespace PartnerMatcher.View
 {
     /// <summary>
     /// Interaction logic for findWin.xaml
@@ -30,10 +31,10 @@ namespace PartnerMatcher
 
         public findWin(BusLogic buslog)
         {
-            busLogic = buslog;
+            this.busLogic = buslog;
             InitializeComponent();
-            comboBoxKind.ItemsSource = busLogic.kinds.Keys.ToList();
-            comboBoxArea.ItemsSource = busLogic.areas;
+            comboBoxKind.ItemsSource = buslog.getKinds();
+            comboBoxArea.ItemsSource = busLogic.getAreas();
             lblCount.Visibility = System.Windows.Visibility.Hidden;
             gvData.Visibility = System.Windows.Visibility.Hidden;
             gvDataFree.Visibility = System.Windows.Visibility.Hidden;
@@ -56,7 +57,6 @@ namespace PartnerMatcher
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
-
         {
             lblCount.Visibility = System.Windows.Visibility.Hidden;
             gvDataFree.Visibility = System.Windows.Visibility.Hidden;
@@ -74,23 +74,9 @@ namespace PartnerMatcher
             }
 
             bool found = false;
-            OleDbCommand cmd = new OleDbCommand();
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            cmd.Connection = con;
-
-            string tableName = this.busLogic.kinds[chosenKind];
-            if (chosenArea == null)
-                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True";
-            else
-
-                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'";
-
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
-            da.Fill(dt);
-            deleteCols();
-            //draw the results as a table
+            //execute the find operation for the payed adds and recive the results
+            busLogic.find(chosenArea, chosenKind, ref dt, true);
             gvData.ItemsSource = dt.AsDataView();
 
 
@@ -105,15 +91,11 @@ namespace PartnerMatcher
             {
                 gvData.Visibility = System.Windows.Visibility.Hidden;
             }
-            if (chosenArea == null)
-                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False";
-            else
-                cmd.CommandText = "SELECT * from " + tableName + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'";
 
-            da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
-            da.Fill(dt);
-            deleteCols();
+
+            //execute the find operation for the free adds and recive the results
+            busLogic.find(chosenArea, chosenKind, ref dt, false);
             gvDataFree.ItemsSource = dt.AsDataView();
 
 
@@ -131,18 +113,7 @@ namespace PartnerMatcher
 
         }
 
-        //remove unnececery colums from the search results
-        private void deleteCols()
-        {
-            dt.Columns.Remove("mail");
-            dt.Columns.Remove("Payed");
-            dt.Columns.Remove("addID");
-            dt.Columns.Remove("smoke");
-            dt.Columns.Remove("kosher");
-            dt.Columns.Remove("quiet");
-            dt.Columns.Remove("animals");
-            dt.Columns.Remove("play");
-        }
+
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {

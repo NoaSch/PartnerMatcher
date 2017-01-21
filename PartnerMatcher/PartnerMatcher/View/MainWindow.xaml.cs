@@ -1,14 +1,16 @@
-﻿using System;
+﻿using PartnerMatcher.Logic;
+using System;
 using System.Windows;
 
 
-namespace PartnerMatcher
+namespace PartnerMatcher.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+
         //the business locic 
         BusLogic model;
         public MainWindow()
@@ -21,7 +23,7 @@ namespace PartnerMatcher
 
         private void sign_Click(object sender, RoutedEventArgs e)
         {
-            connWin cw = new connWin();
+            connWin cw = new connWin(model);
             cw.ShowDialog();
             if (cw.conf == true)
                 userName.Content = cw.usr;
@@ -30,7 +32,7 @@ namespace PartnerMatcher
 
         private void crateAcc_Click(object sender, RoutedEventArgs e)
         {
-            userAndPass createWin = new userAndPass();
+            userAndPass createWin = new userAndPass(model);
             createWin.Show();
 
 

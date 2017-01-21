@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PartnerMatcher.Logic;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -15,18 +16,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PartnerMatcher
+namespace PartnerMatcher.View
 {
     /// <summary>
     /// Interaction logic for userAndPass.xaml
     /// </summary>
     public partial class userAndPass : Window
     {
+        BusLogic busLogic;
         //string mail;
-        public userAndPass()
+        public userAndPass(BusLogic busLogic)
         {
             InitializeComponent();
-
+            this.busLogic = busLogic;
         }
 
         private void create_Click(object sender, RoutedEventArgs e)
@@ -37,7 +39,7 @@ namespace PartnerMatcher
 
             }
 
-            else if (checkExistMail(mailTxt.Text))
+            else if (busLogic.checkIfUseExist(mailTxt.Text))
             {
                 System.Windows.MessageBox.Show("This e-mail is already in the system", "Error");
 
@@ -46,7 +48,7 @@ namespace PartnerMatcher
             {
                 string mail = mailTxt.Text;
                 string Pass = passBox.Password;
-                AddProfileWin apw = new AddProfileWin();
+                AddProfileWin apw = new AddProfileWin(busLogic);
                 apw.mail = mail;
                 apw.pass = Pass;
                 apw.ShowDialog();
@@ -55,22 +57,7 @@ namespace PartnerMatcher
 
         }
 
-        private bool checkExistMail(string text)
-        {
-            OleDbConnection conn = new OleDbConnection();
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
-            conn.Open();
-            OleDbDataReader reader = null;
-            OleDbCommand command = new OleDbCommand("SELECT * from Profiles WHERE  mail ='" + mailTxt.Text.ToString().Trim() + "'", conn);
-            reader = command.ExecuteReader();
-            if (reader.HasRows)
-            {
-                conn.Close();
-                return true;
-            }
-            conn.Close();
-            return false;
-        }
+      
 
     }
 }
