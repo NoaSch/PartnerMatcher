@@ -11,6 +11,8 @@ namespace PartnerMatcher.View
     public partial class MainWindow : Window
     {
 
+       public string user;
+        public string userMail;  
         //the business locic 
         BusLogic model;
         public MainWindow()
@@ -26,7 +28,14 @@ namespace PartnerMatcher.View
             connWin cw = new connWin(model);
             cw.ShowDialog();
             if (cw.conf == true)
+            {
+
                 userName.Content = cw.usr;
+                user = cw.usr;
+                userMail = cw.userMail; 
+
+            }
+
 
         }
 
@@ -34,6 +43,7 @@ namespace PartnerMatcher.View
         {
             userAndPass createWin = new userAndPass(model);
             createWin.Show();
+
 
 
         }
@@ -46,7 +56,7 @@ namespace PartnerMatcher.View
 
         private void findBtn_Click(object sender, RoutedEventArgs e)
         {
-            findWin fw = new findWin(model);
+            findWin fw = new findWin(model, user, userMail);
             fw.ShowDialog();
         }
 

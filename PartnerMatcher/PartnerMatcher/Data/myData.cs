@@ -73,6 +73,43 @@ namespace PartnerMatcher.Data
         }
 
 
+        public void AdvancedSearchDates(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, string gender, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
+        {
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+
+            OleDbCommand cmd = new OleDbCommand();
+            if (conn.State != ConnectionState.Open)
+                conn.Open();
+            cmd.Connection = conn;
+            if (payed)
+            {
+               
+                if (chosenArea == "")
+                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND minAge = " + minAge +" AND max age = " + minAge + "AND gender = " +gender+ " AND smoke = " + smoke + " AND kosher = "+ kosher + " AND quiet = "+ quiet + " AND animals = "+ animals + " AND animals = " + play;
+                else
+
+                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() +" AND minAge = " + minAge +" AND max age = " + minAge + "AND gender = " +gender+ " AND smoke = " + smoke + " AND kosher = "+ kosher + " AND quiet = "+ quiet + " AND animals = "+ animals + " AND animals = " + play;
+            }
+            else
+            {
+                if (chosenArea == "")
+                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False"+ " AND minAge = " + minAge + " AND max age = " + minAge + "AND gender = " + gender + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND animals = " + play;
+                else
+
+                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + " AND minAge = " + minAge + " AND max age = " + minAge + "AND gender = " + gender + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND animals = " + play;
+            }
+
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            deleteCols(ref dt);
+            //draw the results as a table
+
+
+        }
+
+
         //check if a mail is exist in the db
         public bool checkIfUserExist(string mail)
         {
@@ -94,6 +131,52 @@ namespace PartnerMatcher.Data
             return false;
         }
 
+        
+        public bool saveRequest(string mail, DateTime date,int activityId, string kindName, int adId, string content, int status)
+        {
+
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+            cmd = new OleDbCommand();
+            cmd.CommandText = "INSERT into RequestId (askerMail, RequsetDate, ActivityId, KindName, AdId, Content, Status) values(@askerMail, @RequsetDate ,@activityId ,@kindName, @adId, @content, @status)";
+            cmd.Connection = conn;
+
+            conn.Open();
+
+            if (conn.State == ConnectionState.Open)
+            {
+                cmd.Parameters.Add("@askerMail", OleDbType.VarChar).Value = mail;
+                cmd.Parameters.Add("@date", OleDbType.DBDate).Value = date;
+                cmd.Parameters.Add("@activityId", OleDbType.Integer).Value = activityId;
+                cmd.Parameters.Add("@KindName", OleDbType.VarChar).Value = kindName;
+                cmd.Parameters.Add("@AdId", OleDbType.Integer).Value = adId;
+                cmd.Parameters.Add("@Content", OleDbType.VarChar).Value = content;
+                cmd.Parameters.Add("@Status", OleDbType.Integer).Value = status;
+
+                try
+                {
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (OleDbException ex)
+                {
+
+                    conn.Close();
+                    return false;
+                }
+
+
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+    
         //ckeck if the password of user is correct
         public bool checkPassword(string mail, string password)
         {
@@ -164,13 +247,35 @@ namespace PartnerMatcher.Data
         }
 
 
+        public List<string> getMumbersActivity(int id)
+        {
+       
+            OleDbDataReader reader = null;
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
 
+            OleDbCommand cmd = new OleDbCommand();
+            if (conn.State != ConnectionState.Open)
+                conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT * from ActivitiesMembers" + " WHERE ActivityId = " + id;
+           // OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+           // DataTable dt = new DataTable();
+          //  da.Fill(dt);
+            reader = cmd.ExecuteReader();
+            List<string> members = new List<string>();
+            while (reader.Read())
+            {
+                members.Add(reader[1].ToString());
+            }
+            return members; 
+        }
         //remove unnececery colums from the search results
         private void deleteCols(ref DataTable dt)
         {
-            dt.Columns.Remove("mail");
+           // dt.Columns.Remove("mail");
             dt.Columns.Remove("Payed");
-            dt.Columns.Remove("addID");
+           // dt.Columns.Remove("addID");
             dt.Columns.Remove("smoke");
             dt.Columns.Remove("kosher");
             dt.Columns.Remove("quiet");

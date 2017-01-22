@@ -24,6 +24,7 @@ namespace PartnerMatcher.View
     {
         BusLogic busLogic;
         public string usr;
+        public string userMail; 
         public bool conf;
         public connWin(BusLogic busLogic)
         {
@@ -54,6 +55,7 @@ namespace PartnerMatcher.View
                     }
                     else
                     {
+                        userMail = mailTxt.Text.ToString().Trim(); 
                         usr = busLogic.GetName(mailTxt.Text.ToString().Trim());
                         conf = true;
                                 Close();

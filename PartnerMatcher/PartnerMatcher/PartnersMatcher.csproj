@@ -70,6 +70,12 @@
     <Compile Include="View\createUser.xaml.cs">
       <DependentUpon>createUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\requestWin.xaml.cs">
+      <DependentUpon>requestWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\searchDatesWin.xaml.cs">
+      <DependentUpon>searchDatesWin.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\AddProfileWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +106,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\createUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\requestWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\searchDatesWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,7 +177,9 @@
   <ItemGroup>
     <Resource Include="pics\addprofile2.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="pics\imagereq.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
