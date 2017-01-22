@@ -78,10 +78,9 @@ namespace PartnerMatcher.Logic
         
         public bool applyRequest(string askerMail, int activityID, string chosenKind,int  adId,string  content, string AdvertiserMail)
         {
-
             sendMailToUser(askerMail, "Your request has been send", "Your request has been send to the partners in the activity and the Advertiser, wait for response.");
             sendMailToUser(AdvertiserMail, "You get request to join for one of actovities you advertise ", askerMail+ " asks to join for the activity. the content of the request is: " + content + ". all the partners in the activity got mail with request for ranking it. ");
-           List<string> members= data.getMumbersActivity(activityID);
+           List<string> members= data.getMembersActivity(activityID);
             DateTime localDate = DateTime.Now;
             foreach (string item in members)
             {
@@ -93,13 +92,8 @@ namespace PartnerMatcher.Logic
 
         public void AdvancedSearchDates(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, string gender, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
         {
-
              data.AdvancedSearchDates(chosenArea,chosenKind, ref  dt,  payed,minAge,  maxAge,  gender,  smoke,  kosher, quiet,  animals, play); 
-
         }
-
-
-
 
 
         public bool checkIfUseExist(string mail)
@@ -122,6 +116,11 @@ namespace PartnerMatcher.Logic
         public void find(string chosenArea, string chosenKind, ref DataTable dt, bool payed)
         {
             data.find(chosenArea, chosenKind, ref dt, payed);
+        }
+
+        internal List<string> GetUserActivities(string userMail)
+        {
+            return data.getMemberActivities(userMail);
         }
     }
 }

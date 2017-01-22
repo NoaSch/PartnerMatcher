@@ -60,12 +60,12 @@ namespace PartnerMatcher.View
                 int selectedIndex = comboBoxGen.SelectedIndex;
                 if (selectedIndex == 0)
                 {
-                    gender = "male"; 
+                    gender = "male";
 
                 }
                 else gender = "women";
-             //   Object selectedItem = comboBoxGen.SelectedItem;
-              //  gender = selectedItem.ToString();
+                //   Object selectedItem = comboBoxGen.SelectedItem;
+                //  gender = selectedItem.ToString();
                 //get all matching rows
 
                 smoke = checkBoxSmoke.IsChecked;
