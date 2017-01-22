@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PartnerMatcher.View"
         mc:Ignorable="d"
         Title="searchDateWin" Height="300" Width="300">
-    <Grid Margin="0,0,0,-119">
+    <Grid Margin="0,0,0,-190">
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/pics/find.jpg" Stretch="UniformToFill" Opacity="0.3" AlignmentY="Top"/>
         </Grid.Background>
@@ -30,7 +30,10 @@
             </StackPanel>
             <StackPanel Height="35" Orientation="Horizontal">
                 <Label x:Name="comboGenderLbl" Content="Gender:" Margin="0,0,0,-0.333" Width="60"/>
-                <ComboBox x:Name="comboBoxGen" Width="80" Margin="0,0,0,13.667"/>
+                <ComboBox x:Name="comboBoxGen" Width="80" Margin="0,0,0,13.667">
+                    <ComboBoxItem Name="male">male</ComboBoxItem>
+                    <ComboBoxItem Name="women">women</ComboBoxItem>
+                    </ComboBox>
             </StackPanel>
 
             <StackPanel Height="35" Margin="0,10,0,0" Orientation="Horizontal">

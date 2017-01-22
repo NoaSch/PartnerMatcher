@@ -84,21 +84,14 @@ namespace PartnerMatcher.Data
             cmd.Connection = conn;
             if (payed)
             {
-               
-                if (chosenArea == "")
-                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND minAge = " + minAge +" AND max age = " + minAge + "AND gender = " +gender+ " AND smoke = " + smoke + " AND kosher = "+ kosher + " AND quiet = "+ quiet + " AND animals = "+ animals + " AND animals = " + play;
-                else
 
-                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() +" AND minAge = " + minAge +" AND max age = " + minAge + "AND gender = " +gender+ " AND smoke = " + smoke + " AND kosher = "+ kosher + " AND quiet = "+ quiet + " AND animals = "+ animals + " AND animals = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim()+ "'"+ " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
             }
             else
             {
-                if (chosenArea == "")
-                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False"+ " AND minAge = " + minAge + " AND max age = " + minAge + "AND gender = " + gender + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND animals = " + play;
-                else
-
-                    cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + " AND minAge = " + minAge + " AND max age = " + minAge + "AND gender = " + gender + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND animals = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'"+ " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim()+ "'"+ " AND smoke = " + smoke+ " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
             }
+
 
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();

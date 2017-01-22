@@ -57,6 +57,15 @@ namespace PartnerMatcher.View
             else
             {
                 gender = comboBoxGen.SelectedValue.ToString();
+                int selectedIndex = comboBoxGen.SelectedIndex;
+                if (selectedIndex == 0)
+                {
+                    gender = "male"; 
+
+                }
+                else gender = "women";
+             //   Object selectedItem = comboBoxGen.SelectedItem;
+              //  gender = selectedItem.ToString();
                 //get all matching rows
 
                 smoke = checkBoxSmoke.IsChecked;
@@ -65,7 +74,7 @@ namespace PartnerMatcher.View
                 animals = checkBoxAnimals.IsChecked;
                 play = checkBoxPlay.IsChecked;
                 isSearch = true;
-
+                Close();
                 // bool added = busLogic.AdvancedSearchDates(mail, pass, age, gender, smoke, name, kosher, quiet, animals, play, about);
                 /*
                  if (added)
