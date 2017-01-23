@@ -23,27 +23,50 @@ namespace PartnerMatcher.View
         BusLogic busLogic;
         public bool addreq;
         string userMail;
-        string activityName;
-        string activityArea;
-        string activityKind;
-        List<string> userActivities;
+        string activityLine;        
+        string activityName; //[1]
+        string activityArea; //[2]
+        string activityKind; //[3]
+        Dictionary<int, string> userActivities;
 
-        int adId;
-        string AdvertiserMail;
         public postAdWin(BusLogic logic, string mail)
         {
             InitializeComponent();
             busLogic = logic;
             userMail = mail;
+            EnableContent(false);
             userActivities = busLogic.GetUserActivities(userMail);
-            ActivitiesListBox.ItemsSource = userActivities;
+            ShowActivities();
             //activityID = activityId;
             //this.chosenKind = chosenKind;
             //this.adId = adId;
             //this.AdvertiserMail = AdvertiserMail; 
         }
 
+        private void ShowActivities()
+        {
+            List<string> list = new List<string>();
+            if (userActivities.Keys.Count == 0) //no activities
+            {
+                list.Add("You don't have any activities yet. please create one first :)");
+            }
+            else
+            {
+                list.Add("<Activity Name>\t<Kind>\t<CreationDate>");
+                foreach (int activityID in userActivities.Keys)
+                {
+                    list.Add(userActivities[activityID]);
+                }
+            }
+            ActivitiesListBox.ItemsSource = list;          
+        }
 
+        private void EnableContent(bool isEnable)
+        {
+            additionalInfoTextBox.IsEnabled = isEnable;
+            kindTextBox.IsEnabled = isEnable;
+            areaInfoTextBox.IsEnabled = isEnable;
+        }
         private void postButton_Click(object sender, RoutedEventArgs e)
         {
             //busLogic.applyRequest(askerMail, activityID, chosenKind, adId, content, AdvertiserMail);
@@ -53,7 +76,16 @@ namespace PartnerMatcher.View
 
         private void activityButton_Click(object sender, RoutedEventArgs e)
         {
-            activityName= ActivitiesListBox.SelectedItem.ToString();
+            if (ActivitiesListBox.SelectedItem==null || ActivitiesListBox.SelectedIndex == 0)
+                return;
+            activityLine = ActivitiesListBox.SelectedItem.ToString();
+            string[] splitted = activityLine.Split('\t');
+            activityName = splitted[0];
+            activityArea = splitted[1];
+            activityKind = splitted[2];
+            kindTextBox.Text = activityKind;
+            areaInfoTextBox.Text = activityArea;
+            additionalInfoTextBox.IsEnabled = true;
         }
     }
 }
