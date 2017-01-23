@@ -70,6 +70,9 @@
     <Compile Include="View\createUser.xaml.cs">
       <DependentUpon>createUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\postAdWin.xaml.cs">
+      <DependentUpon>postAdWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\requestWin.xaml.cs">
       <DependentUpon>requestWin.xaml</DependentUpon>
     </Compile>
@@ -108,6 +111,10 @@
     <Page Include="View\createUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\postAdWin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\requestWin.xaml">
       <SubType>Designer</SubType>

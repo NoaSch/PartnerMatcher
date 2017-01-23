@@ -20,7 +20,6 @@ namespace PartnerMatcher.View
     /// </summary>
     public partial class requestWin : Window
     {
-
         BusLogic buslogbusLogic;
         public bool addreq;
         string content;
@@ -39,8 +38,7 @@ namespace PartnerMatcher.View
             this.adId = adId;
             this.AdvertiserMail = AdvertiserMail; 
         }
-
-
+        
 
         private void button_Click(object sender, RoutedEventArgs e)
         {

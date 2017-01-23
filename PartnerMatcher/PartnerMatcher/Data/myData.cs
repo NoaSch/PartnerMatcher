@@ -14,14 +14,11 @@ namespace PartnerMatcher.Data
         OleDbConnection conn;
         OleDbCommand cmd;
 
-
         public myData()
         {
             conn = new OleDbConnection();
             cmd = new OleDbCommand();
         }
-
-
 
         //add new user to the db
         public bool AddUserToDB(string mail, string pass, int age, string gender, bool? smoke, string name, bool? kosher, bool? quiet, bool? animals, bool? play, string about)
@@ -33,7 +30,6 @@ namespace PartnerMatcher.Data
             cmd.Connection = conn;
 
             conn.Open();
-
             if (conn.State == ConnectionState.Open)
             {
                 cmd.Parameters.Add("@mail", OleDbType.VarChar).Value = mail;
@@ -50,28 +46,21 @@ namespace PartnerMatcher.Data
 
                 try
                 {
-
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
                 }
                 catch (OleDbException ex)
                 {
-
                     conn.Close();
                     return false;
                 }
-
-
             }
             else
             {
                 return false;
             }
-
-
         }
-
 
         public void AdvancedSearchDates(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, string gender, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
         {
@@ -84,30 +73,24 @@ namespace PartnerMatcher.Data
             cmd.Connection = conn;
             if (payed)
             {
-
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim()+ "'"+ " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
             }
             else
             {
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'"+ " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim()+ "'"+ " AND smoke = " + smoke+ " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
             }
-
 
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
             deleteCols(ref dt);
             //draw the results as a table
-
-
         }
 
 
         //check if a mail is exist in the db
         public bool checkIfUserExist(string mail)
         {
-
-
             conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
             conn.Open();
@@ -124,10 +107,9 @@ namespace PartnerMatcher.Data
             return false;
         }
 
-        
-        public bool saveRequest(string mail, DateTime date,int activityId, string kindName, int adId, string content, int status)
-        {
 
+        public bool saveRequest(string mail, DateTime date, int activityId, string kindName, int adId, string content, int status)
+        {
             conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
             cmd = new OleDbCommand();
@@ -135,7 +117,6 @@ namespace PartnerMatcher.Data
             cmd.Connection = conn;
 
             conn.Open();
-
             if (conn.State == ConnectionState.Open)
             {
                 cmd.Parameters.Add("@askerMail", OleDbType.VarChar).Value = mail;
@@ -148,28 +129,22 @@ namespace PartnerMatcher.Data
 
                 try
                 {
-
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
                 }
                 catch (OleDbException ex)
                 {
-
                     conn.Close();
                     return false;
                 }
-
-
             }
             else
             {
                 return false;
             }
-
         }
-
-    
+        
         //ckeck if the password of user is correct
         public bool checkPassword(string mail, string password)
         {
@@ -183,10 +158,8 @@ namespace PartnerMatcher.Data
             //check if the mail exists
             if (!reader.HasRows)
             {
-
                 conn.Close();
                 return false;
-
             }
             else
             {
@@ -204,9 +177,8 @@ namespace PartnerMatcher.Data
                         return true;
                     }
                 }
-
-
             }
+
             return false;
         }
 
@@ -233,16 +205,14 @@ namespace PartnerMatcher.Data
                     ans = reader[0].ToString();
                     return ans;
                 }
-
-
             }
+
             return ans;
         }
-
-
-        public List<string> getMumbersActivity(int id)
+        
+        //list of all the members in a requested activity
+        public List<string> getMembersActivity(int id)
         {
-       
             OleDbDataReader reader = null;
             conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
@@ -252,23 +222,62 @@ namespace PartnerMatcher.Data
                 conn.Open();
             cmd.Connection = conn;
             cmd.CommandText = "SELECT * from ActivitiesMembers" + " WHERE ActivityId = " + id;
-           // OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-           // DataTable dt = new DataTable();
-          //  da.Fill(dt);
+            // OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            // DataTable dt = new DataTable();
+            //  da.Fill(dt);
             reader = cmd.ExecuteReader();
             List<string> members = new List<string>();
             while (reader.Read())
             {
                 members.Add(reader[1].ToString());
             }
-            return members; 
+            return members;
         }
+
+        //list of all the activities that the user is a member in them
+        public Dictionary<int, string> getMemberActivities(string userMail)
+        {
+            OleDbDataReader reader = null;
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+            string tableName = "ActivitiesMembers";
+            //OleDbCommand cmd = new OleDbCommand();
+            if (conn.State != ConnectionState.Open)
+                conn.Open();
+            cmd.Connection = conn;
+            cmd = new OleDbCommand("SELECT ActivityId FROM "+tableName+ " WHERE Mail = '" + userMail.Trim() + "'", conn);
+            //cmd.CommandText = "SELECT ActivityId FROM ActivitiesMembers " + " WHERE Mail = '" + userMail.Trim() + "' AND Activities.ActivityId = ActivitiesMembers.ActivityId ";
+            // OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            // DataTable dt = new DataTable();
+            //  da.Fill(dt);
+            reader = cmd.ExecuteReader();
+            List<string> activities = new List<string>();
+            Dictionary<int, string> results = new Dictionary<int, string>();
+            while (reader.Read())
+            {                
+                activities.Add(reader[0].ToString());
+            }
+            tableName = "Activities";
+            for (int i = 0; i < activities.Count; i++)
+			{
+                reader = null;
+                cmd = new OleDbCommand("SELECT * FROM "+tableName+ " WHERE ActivityId = " + activities[i], conn);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string line = reader[1].ToString() + "\t" + reader[2].ToString() + "\t" + reader[3].ToString()+"\t" + reader[4].ToString();
+                    results.Add(Int32.Parse(reader[0].ToString()), line);
+                }                
+            }
+            return results;
+        }
+
         //remove unnececery colums from the search results
         private void deleteCols(ref DataTable dt)
         {
-           // dt.Columns.Remove("mail");
+            // dt.Columns.Remove("mail");
             dt.Columns.Remove("Payed");
-           // dt.Columns.Remove("addID");
+            // dt.Columns.Remove("addID");
             dt.Columns.Remove("smoke");
             dt.Columns.Remove("kosher");
             dt.Columns.Remove("quiet");
@@ -292,7 +301,6 @@ namespace PartnerMatcher.Data
                 if (chosenArea == "")
                     cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True";
                 else
-
                     cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'";
             }
             else
@@ -300,7 +308,6 @@ namespace PartnerMatcher.Data
                 if (chosenArea == "")
                     cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False";
                 else
-
                     cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'";
             }
 

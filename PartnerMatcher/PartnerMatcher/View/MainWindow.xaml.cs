@@ -20,7 +20,6 @@ namespace PartnerMatcher.View
             InitializeComponent();
             Console.WriteLine("test");
             model = new BusLogic();
-
         }
 
         private void sign_Click(object sender, RoutedEventArgs e)
@@ -29,29 +28,29 @@ namespace PartnerMatcher.View
             cw.ShowDialog();
             if (cw.conf == true)
             {
-
                 userName.Content = cw.usr;
                 user = cw.usr;
                 userMail = cw.userMail; 
-
             }
-
-
         }
 
         private void crateAcc_Click(object sender, RoutedEventArgs e)
         {
             userAndPass createWin = new userAndPass(model);
             createWin.Show();
-
-
-
         }
 
         private void postButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("The Service is Unavailable");
-
+            if (user != null)
+            {
+                postAdWin postAd = new postAdWin(model, userMail);
+                postAd.Show();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Only registered users are allowd to post an ad");
+            }
         }
 
         private void findBtn_Click(object sender, RoutedEventArgs e)

@@ -58,7 +58,7 @@ namespace PartnerMatcher.View
                         userMail = mailTxt.Text.ToString().Trim(); 
                         usr = busLogic.GetName(mailTxt.Text.ToString().Trim());
                         conf = true;
-                        Close();
+                                Close();
 
                     }
 
