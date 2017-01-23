@@ -23,7 +23,7 @@ namespace PartnerMatcher.View
         BusLogic busLogic;
         public bool addreq;
         string userMail;
-        string activityLine;        
+        string activityLine;
         string activityName; //[1]
         string activityArea; //[2]
         string activityKind; //[3]
@@ -58,7 +58,7 @@ namespace PartnerMatcher.View
                     list.Add(userActivities[activityID]);
                 }
             }
-            ActivitiesListBox.ItemsSource = list;          
+            ActivitiesListBox.ItemsSource = list;
         }
 
         private void EnableContent(bool isEnable)
@@ -76,7 +76,7 @@ namespace PartnerMatcher.View
 
         private void activityButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ActivitiesListBox.SelectedItem==null || ActivitiesListBox.SelectedIndex == 0)
+            if (ActivitiesListBox.SelectedItem == null || ActivitiesListBox.SelectedIndex == 0)
                 return;
             activityLine = ActivitiesListBox.SelectedItem.ToString();
             string[] splitted = activityLine.Split('\t');

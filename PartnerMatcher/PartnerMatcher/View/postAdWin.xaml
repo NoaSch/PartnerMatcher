@@ -37,7 +37,7 @@
                 <TextBox Grid.Row="1" x:Name="additionalInfoTextBox" HorizontalAlignment="Center" Height="30" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" RenderTransformOrigin="0.5,0.5"/>
             </StackPanel>
         </StackPanel>
-            <StackPanel Grid.Row="2">
+        <StackPanel Grid.Row="2">
             <Button x:Name="postButton" Content="Post Ad" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="25" Click="postButton_Click" Margin="106,0"/>
         </StackPanel>
     </Grid>

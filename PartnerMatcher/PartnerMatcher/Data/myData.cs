@@ -245,7 +245,7 @@ namespace PartnerMatcher.Data
             if (conn.State != ConnectionState.Open)
                 conn.Open();
             cmd.Connection = conn;
-            cmd = new OleDbCommand("SELECT ActivityId FROM "+tableName+ " WHERE Mail = '" + userMail.Trim() + "'", conn);
+            cmd = new OleDbCommand("SELECT ActivityId FROM " + tableName + " WHERE Mail = '" + userMail.Trim() + "'", conn);
             //cmd.CommandText = "SELECT ActivityId FROM ActivitiesMembers " + " WHERE Mail = '" + userMail.Trim() + "' AND Activities.ActivityId = ActivitiesMembers.ActivityId ";
             // OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             // DataTable dt = new DataTable();
@@ -254,20 +254,20 @@ namespace PartnerMatcher.Data
             List<string> activities = new List<string>();
             Dictionary<int, string> results = new Dictionary<int, string>();
             while (reader.Read())
-            {                
+            {
                 activities.Add(reader[0].ToString());
             }
             tableName = "Activities";
             for (int i = 0; i < activities.Count; i++)
-			{
+            {
                 reader = null;
-                cmd = new OleDbCommand("SELECT * FROM "+tableName+ " WHERE ActivityId = " + activities[i], conn);
+                cmd = new OleDbCommand("SELECT * FROM " + tableName + " WHERE ActivityId = " + activities[i], conn);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string line = reader[1].ToString() + "\t" + reader[2].ToString() + "\t" + reader[3].ToString()+"\t" + reader[4].ToString();
+                    string line = reader[1].ToString() + "\t" + reader[2].ToString() + "\t" + reader[3].ToString() + "\t" + reader[4].ToString();
                     results.Add(Int32.Parse(reader[0].ToString()), line);
-                }                
+                }
             }
             return results;
         }

@@ -26,31 +26,6 @@ D:\Aelinor\PartnersMatcher-dev\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher
 D:\Aelinor\PartnersMatcher-dev\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
 D:\Aelinor\PartnersMatcher-dev\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
 D:\Aelinor\PartnersMatcher-dev\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe.config
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.pdb
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchDatesWin.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\App.g.cs
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.cache
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.lref
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchDatesWin.baml
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.g.resources
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.Properties.Resources.resources
-D:\New folder (4)\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+D:\New folder (4)\New folder\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe.config
+D:\New folder (4)\New folder\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
+D:\New folder (4)\New folder\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb
