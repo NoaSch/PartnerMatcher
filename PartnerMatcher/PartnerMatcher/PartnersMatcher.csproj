@@ -64,6 +64,24 @@
     <Compile Include="View\connWin.xaml.cs">
       <DependentUpon>connWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AddActivityMembers.xaml.cs">
+      <DependentUpon>AddActivityMembers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchReal_Estate.xaml.cs">
+      <DependentUpon>SearchReal_Estate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\searchSport.xaml.cs">
+      <DependentUpon>searchSport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchTrips.xaml.cs">
+      <DependentUpon>SearchTrips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SerachDate.xaml.cs">
+      <DependentUpon>SerachDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\createActivity.xaml.cs">
+      <DependentUpon>createActivity.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\findWin.xaml.cs">
       <DependentUpon>findWin.xaml</DependentUpon>
     </Compile>
@@ -76,9 +94,6 @@
     <Compile Include="View\requestWin.xaml.cs">
       <DependentUpon>requestWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\searchDatesWin.xaml.cs">
-      <DependentUpon>searchDatesWin.xaml</DependentUpon>
-    </Compile>
     <Page Include="View\AddProfileWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +101,30 @@
     <Page Include="View\connWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddActivityMembers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SearchReal_Estate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\searchSport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SearchTrips.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SerachDate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\createActivity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\findWin.xaml">
       <SubType>Designer</SubType>
@@ -117,10 +156,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\requestWin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\searchDatesWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,6 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pics\imagereq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\createActivity.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

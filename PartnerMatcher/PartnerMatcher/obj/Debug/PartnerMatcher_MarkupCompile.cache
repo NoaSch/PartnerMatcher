@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Aelinor\PartnersMatcher-dev\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\obj\Debug\
+D:\New folder (4)\PartnerMatcherELI\PartnerMatcher\PartnerMatcher\obj\Debug\
 PartnerMatcher
 none
 false
 DEBUG;TRACE
-D:\Aelinor\PartnersMatcher-dev\PartnersMatcher-dev\PartnerMatcher\PartnerMatcher\App.xaml
-81918614896
+D:\New folder (4)\PartnerMatcherELI\PartnerMatcher\PartnerMatcher\App.xaml
+13773932552
 
-151139878694
+20-1212834283
 13-1142990016
-View\AddProfileWin.xaml;View\connWin.xaml;View\findWin.xaml;View\MainWindow.xaml;View\createUser.xaml;View\postAdWin.xaml;View\requestWin.xaml;View\searchDatesWin.xaml;
+View\AddProfileWin.xaml;View\connWin.xaml;View\AddActivityMembers.xaml;View\SearchReal_Estate.xaml;View\searchSport.xaml;View\SearchTrips.xaml;View\SerachDate.xaml;View\createActivity.xaml;View\findWin.xaml;View\MainWindow.xaml;View\createUser.xaml;View\postAdWin.xaml;View\requestWin.xaml;
 
 False
 
