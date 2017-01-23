@@ -90,9 +90,36 @@ namespace PartnerMatcher.Logic
            return data.saveRequest(askerMail, localDate, activityID, chosenKind, adId, content, status); 
         }
 
+        //noga
         public void AdvancedSearchDates(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, string gender, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
         {
-             data.AdvancedSearchDates(chosenArea,chosenKind, ref  dt,  payed,minAge,  maxAge,  gender,  smoke,  kosher, quiet,  animals, play); 
+
+            data.AdvancedSearchDates(chosenArea, chosenKind, ref  dt, payed, minAge, maxAge, gender, smoke, kosher, quiet, animals, play);
+
+        }
+
+        //noga
+        public void AdvancedSearchSport(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, string type, int level, bool? smoke)
+        {
+
+            data.AdvancedSearchSport(chosenArea, chosenKind, ref dt, payed, minAge, maxAge, type, level, smoke);
+
+        }
+
+        //noga
+        public void AdvancedSearchApartment(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, int roomsNum, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
+        {
+
+            data.AdvancedSearchApartment(chosenArea, chosenKind, ref dt, payed, minAge, maxAge, roomsNum, smoke, kosher, quiet, animals, play);
+
+        }
+
+        //noga
+        public void AdvancedSearchTrips(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, string kind, string country, bool? smoke, bool? kosher, bool? quiet)
+        {
+
+            data.AdvancedSearchTrips(chosenArea, chosenKind, ref dt, payed, minAge, maxAge, kind, country, smoke, kosher, quiet);
+
         }
 
 
@@ -112,16 +139,56 @@ namespace PartnerMatcher.Logic
             return data.getName(mail);
         }
 
+        public List<string> GetKindFields(string kind)
+        {
+            List<string> kinds = data.getKinds();
+            if (!kinds.Contains(kind))
+                return null;
+            List<string> fields = data.GetKindFields(kind);
+
+            return fields;
+        }
 
         public void find(string chosenArea, string chosenKind, ref DataTable dt, bool payed)
         {
             data.find(chosenArea, chosenKind, ref dt, payed);
         }
 
-        internal List<string> GetUserActivities(string userMail)
+        internal Dictionary<int, string> GetUserActivities(string userMail)
         {
             return data.getMemberActivities(userMail);
         }
+
+        public void AddTripsAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string country, DateTime date, string kindof, string content)
+        {
+            data.AddTripsAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, country, date, kindof, content);
+        }
+
+        public void AddDatesAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string gender, string about, string content)
+        {
+            data.AddDatesAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, gender, about, content);
+        }
+
+        public void AddSportsAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, int level, string type, string content)
+        {
+            data.AddSportsAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, level, type, content);
+        }
+
+        public void AddEstaeteAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string address, int numofrooms, string content)
+        {
+            data.AddEstaeteAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, address, numofrooms, content);
+        }
+
+
+        internal int CreateNewActivity(string area, string kind, string name, string head, string userMail, string info)
+        {
+            return data.CreateNewActivity(area, kind, name, head, userMail, info);
+        }
+
+        internal bool AddnewActivityMember(int actId, string userMail, bool isHead)
+        {
+            return data.AddnewActivityMember(actId, userMail, isHead);
+        }
+        
     }
 }
-
