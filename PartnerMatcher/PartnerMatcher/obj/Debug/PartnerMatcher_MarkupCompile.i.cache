@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Lera\Source\Repos\PartnersMatcher3\PartnerMatcher\PartnerMatcher\obj\Debug\
+C:\Users\Lera\Source\Repos\PartnersMatcher4\PartnerMatcher\PartnerMatcher\obj\Debug\
 PartnerMatcher
 none
 false
 DEBUG;TRACE
-C:\Users\Lera\Source\Repos\PartnersMatcher3\PartnerMatcher\PartnerMatcher\App.xaml
+C:\Users\Lera\Source\Repos\PartnersMatcher4\PartnerMatcher\PartnerMatcher\App.xaml
 13773932552
 
 24-1828886733
 13-1142990016
 View\AddProfileWin.xaml;View\connWin.xaml;View\AddActivityMembers.xaml;View\SearchReal_Estate.xaml;View\searchSport.xaml;View\SearchTrips.xaml;View\SerachDate.xaml;View\createActivity.xaml;View\findWin.xaml;View\MainWindow.xaml;View\createUser.xaml;View\postAdWin.xaml;View\requestWin.xaml;
 
-True
+False
 
