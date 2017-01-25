@@ -105,5 +105,19 @@ namespace PartnerMatcher.View
         {
             System.Windows.MessageBox.Show("The Service is Unavailable");
         }
+
+        private void createActBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (user != null)
+            {
+                createActivity cA = new createActivity(model, userMail);
+                cA.ShowDialog();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Only registered users are allowd to creae new activity");
+            }
+        }
+
     }
 }

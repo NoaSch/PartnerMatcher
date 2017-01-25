@@ -159,24 +159,24 @@ namespace PartnerMatcher.Logic
             return data.getMemberActivities(userMail);
         }
 
-        public void AddTripsAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string country, DateTime date, string kindof, string content)
+        public bool AddTripsAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool smoke, string country, DateTime date, string kindof, string content)
         {
-            data.AddTripsAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, country, date, kindof, content);
+            return data.AddTripsAd(userMail, area, activityId, minAge, maxAge, kosher, quiet, smoke, country, date, kindof, content);
         }
 
-        public void AddDatesAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string gender, string about, string content)
+        public bool AddDatesAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool play, bool animals, bool smoke, string iWant, string gender, string about, string content)
         {
-            data.AddDatesAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, gender, about, content);
+            return data.AddDatesAd(userMail, area, activityId, minAge, maxAge, kosher, quiet, play, animals, smoke, iWant, gender, about, content);
         }
 
-        public void AddSportsAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, int level, string type, string content)
+        public bool AddSportsAd(string userMail, string area, int activityId, int minAge, int maxAge, bool smoke, int level, string type, string content)
         {
-            data.AddSportsAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, level, type, content);
+            return data.AddSportsAd(userMail, area, activityId, minAge, maxAge, smoke, level, type, content);
         }
 
-        public void AddEstaeteAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string address, int numofrooms, string content)
+        public bool AddEstaeteAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool animals, bool smoke, string address, int numofrooms, string content)
         {
-            data.AddEstaeteAd(userMail, area, activittyId, minAge, maxAge, kosher, quite, play, animalds, smoke, address, numofrooms, content);
+            return data.AddEstaeteAd(userMail, area, activityId, minAge, maxAge, kosher, quiet, animals, smoke, address, numofrooms, content);
         }
 
 

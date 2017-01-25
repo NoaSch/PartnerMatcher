@@ -105,3 +105,120 @@ D:\New folder (4)\PartnerMatcherELI\PartnerMatcher\PartnerMatcher\obj\Debug\View
 D:\New folder (4)\PartnerMatcherELI\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.g.resources
 D:\New folder (4)\PartnerMatcherELI\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.Properties.Resources.resources
 D:\New folder (4)\PartnerMatcherELI\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe.config
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.pdb
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddActivityMembers.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchReal_Estate.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchSport.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchTrips.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\SerachDate.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\createActivity.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\App.g.cs
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.cache
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.lref
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddActivityMembers.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchReal_Estate.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchSport.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchTrips.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\SerachDate.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\createActivity.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.baml
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.g.resources
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.Properties.Resources.resources
+C:\Users\Elinor\Dropbox\ניתוח ועיצוב מערכות מידע\תכנות\PartnerMatcher\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe.config
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddActivityMembers.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchReal_Estate.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchSport.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchTrips.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\SerachDate.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\createActivity.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\App.g.cs
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.cache
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.lref
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.pdb
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddActivityMembers.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchReal_Estate.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchSport.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchTrips.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\SerachDate.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\createActivity.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.baml
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.g.resources
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.Properties.Resources.resources
+C:\Users\user\Desktop\PartnerMatcher (1)\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe.config
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.pdb
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddActivityMembers.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchReal_Estate.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchSport.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchTrips.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\SerachDate.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\createActivity.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\App.g.cs
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.cache
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher_MarkupCompile.lref
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddProfileWin.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\connWin.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\AddActivityMembers.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchReal_Estate.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\searchSport.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\SearchTrips.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\SerachDate.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\createActivity.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\findWin.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\MainWindow.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\createUser.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\postAdWin.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\View\requestWin.baml
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.g.resources
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.Properties.Resources.resources
+C:\Users\Lera\Desktop\קוד נגה חדש\PartnerMatcher\PartnerMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\Lera\Source\Repos\PartnersMatcher3\PartnerMatcher\PartnerMatcher\bin\Debug\PartnerMatcher.exe.config
+C:\Users\Lera\Source\Repos\PartnersMatcher3\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.exe
+C:\Users\Lera\Source\Repos\PartnersMatcher3\PartnerMatcher\PartnerMatcher\obj\Debug\PartnerMatcher.pdb

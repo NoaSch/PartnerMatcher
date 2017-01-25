@@ -93,11 +93,11 @@ namespace PartnerMatcher.Data
             if (payed)
             {
 
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND gender = '" + gender.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
             }
             else
             {
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND gender = '" + gender.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND gender = '" + gender.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
             }
 
 
@@ -122,11 +122,11 @@ namespace PartnerMatcher.Data
             if (payed)
             {
 
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND Type = " + type + " AND level = " + level + " AND smoke = " + smoke;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND Type = '" + type.Trim() + "'" + " AND level = " + level + " AND smoke = " + smoke;
             }
             else
             {
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND Type = " + type + " AND level = " + level + " AND smoke = " + smoke;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND Type = '" + type.Trim() + "'" + " AND level = " + level + " AND smoke = " + smoke;
             }
 
 
@@ -135,8 +135,6 @@ namespace PartnerMatcher.Data
             da.Fill(dt);
             deleteColsSports(ref dt);
             //draw the results as a table
-
-
         }
 
         public void AdvancedSearchApartment(string chosenArea, string chosenKind, ref DataTable dt, bool payed, int minAge, int maxAge, int roomNum, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
@@ -151,11 +149,11 @@ namespace PartnerMatcher.Data
             if (payed)
             {
 
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND numberOfRooms = " + roomNum + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND numberOfRooms = " + roomNum + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals;
             }
             else
             {
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND numberOfRooms = " + roomNum + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals + " AND play = " + play;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND numberOfRooms = " + roomNum + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet + " AND animals = " + animals;
             }
 
 
@@ -180,11 +178,11 @@ namespace PartnerMatcher.Data
             if (payed)
             {
 
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND KindOfTrip = '" + kind.Trim() + "'" + " AND Country = '" + country.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = True AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND KindOfTrip = '" + kind.Trim() + "'" + " AND Country = '" + country.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet;
             }
             else
             {
-                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge <= " + minAge + " AND maxAge >= " + maxAge + " AND KindOfTrip = '" + kind.Trim() + "'" + " AND Country = '" + country.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet;
+                cmd.CommandText = "SELECT * from " + chosenKind + " WHERE Payed = False AND Loc = '" + chosenArea.Trim() + "'" + " AND minAge = " + minAge + " AND maxAge = " + maxAge + " AND KindOfTrip = '" + kind.Trim() + "'" + " AND Country = '" + country.Trim() + "'" + " AND smoke = " + smoke + " AND kosher = " + kosher + " AND quiet = " + quiet;
             }
 
 
@@ -381,14 +379,18 @@ namespace PartnerMatcher.Data
         //remove unnececery colums from the search results
         private void deleteCols(ref DataTable dt)
         {
-            // dt.Columns.Remove("mail");
-            dt.Columns.Remove("Payed");
-            // dt.Columns.Remove("addID");
-            dt.Columns.Remove("smoke");
-            dt.Columns.Remove("kosher");
-            dt.Columns.Remove("quiet");
-            dt.Columns.Remove("animals");
-            dt.Columns.Remove("play");
+            try
+            {
+                // dt.Columns.Remove("mail");
+                dt.Columns.Remove("Payed");
+                // dt.Columns.Remove("addID");
+                dt.Columns.Remove("smoke");
+                dt.Columns.Remove("kosher");
+                dt.Columns.Remove("quiet");
+                dt.Columns.Remove("animals");
+                dt.Columns.Remove("play");
+            }
+            catch { }
         }
 
 
@@ -572,7 +574,7 @@ namespace PartnerMatcher.Data
             return kindFields;
         }
 
-        public bool AddTripsAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool play, bool animalds, bool smoke, string country, DateTime date, string kindof, string content)
+        public bool AddTripsAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool smoke, string country, DateTime date, string kindof, string content)
         {
             conn = new OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
@@ -587,7 +589,7 @@ namespace PartnerMatcher.Data
             if (conn.State == ConnectionState.Open)
             {
                 //[AdvertiserMail], [Date], [loc], [Payed], [Country], [StartDate], [KindOfTrip], [minAge], [maxAge], [smoke], [kosher], [quiet], [Content], [Activityid]
-                //(@userMail, @Date, @area, @Payed, @country, @date, @kindof, @minAge, @maxAge, @smoke, @kosher, @quiet, @Content, @activittyId)
+                //(@userMail, @Date, @area, @Payed, @country, @date, @kindof, @minAge, @maxAge, @smoke, @kosher, @quiet, @Content, @activityId)
                 cmd.Parameters.Add("@userMail", OleDbType.VarChar).Value = userMail;
                 cmd.Parameters.Add("@Date", OleDbType.DBDate).Value = Date;
                 cmd.Parameters.Add("@area", OleDbType.VarChar).Value = area;
@@ -620,22 +622,143 @@ namespace PartnerMatcher.Data
             }
         }
 
-        public bool AddDatesAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string gender, string about, string content)
+        public bool AddDatesAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool play, bool animals, bool smoke, string iWant, string gender, string about, string content)
         {
-            return false;
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+            cmd = new OleDbCommand();
+            bool Payed = false;
+            DateTime Date = DateTime.Today;
+            cmd.CommandText = "INSERT into Dates ([AdvertiserMail], [Date], [Loc], [Payed], [gender], [about], [IWant], [minAge], [maxAge], [smoke], [kosher], [quiet], [animals], [play], [Content], [Activityid]) values(@userMail, @Date, @loc, @Payed, @gender, @about, @IWant, @minAge, @maxAge, @smoke, @kosher, @quiet, @animals, @play, @content, @activityId)";
+            cmd.Connection = conn;
+            conn.Open();
+            if (conn.State == ConnectionState.Open)
+            {
+                //cmd.CommandText = "INSERT into Dates ([AdvertiserMail], [Date], [Loc], [Payed], [gender], [about], [IWant], [minAge], [maxAge], [smoke], [kosher], [quiet], [animals], [play], [Content], [Activityid]) values(@userMail, @Date, @Loc, @Payed, @gender, @about, @IWant, @minAge, @maxAge, @smoke, @kosher, @quiet, @animals, @play, @content, @activityId)";
+                cmd.Parameters.Add("@userMail", OleDbType.VarChar).Value = userMail;
+                cmd.Parameters.Add("@Date", OleDbType.DBDate).Value = Date;
+                cmd.Parameters.Add("@loc", OleDbType.VarChar).Value = area;
+                cmd.Parameters.Add("@Payed", OleDbType.Boolean).Value = Payed;
+                cmd.Parameters.Add("@address", OleDbType.VarChar).Value = gender;
+                cmd.Parameters.Add("@numofrooms", OleDbType.VarChar).Value = about;
+                cmd.Parameters.Add("@numofrooms", OleDbType.VarChar).Value = iWant;
+                cmd.Parameters.Add("@minAge", OleDbType.Integer).Value = minAge;
+                cmd.Parameters.Add("@maxAge", OleDbType.Integer).Value = maxAge;
+                cmd.Parameters.Add("@smoke", OleDbType.Boolean).Value = smoke;
+                cmd.Parameters.Add("@kosher", OleDbType.Boolean).Value = kosher;
+                cmd.Parameters.Add("@quiet", OleDbType.Boolean).Value = quiet;
+                cmd.Parameters.Add("@animals", OleDbType.Boolean).Value = animals;
+                cmd.Parameters.Add("@play", OleDbType.Boolean).Value = play;
+                cmd.Parameters.Add("@content", OleDbType.LongVarChar).Value = content;
+                cmd.Parameters.Add("@activityId", OleDbType.Integer).Value = activityId;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (OleDbException ex)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public bool AddSportsAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, int level, string type, string content)
+        public bool AddSportsAd(string userMail, string area, int activityId, int minAge, int maxAge, bool smoke, int level, string type, string content)
         {
-            return false;
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+            cmd = new OleDbCommand();
+            bool Payed = false;
+            DateTime Date = DateTime.Today;
+            cmd.CommandText = "INSERT into Sport ([AdvertiserMail], [Date], [Loc], [Payed], [Type], [level], [minAge], [maxAge], [smoke], [Content], [Activityid]) values(@userMail, @Date, @area, @Payed, @type, @level, @minAge, @maxAge, @smoke, @content, @activityId)";
+            cmd.Connection = conn;
+            conn.Open();
+            if (conn.State == ConnectionState.Open)
+            {
+                //values(@userMail, @Date, @area, @payed, @type, @level, @minAge, @maxAge, @smoke, @content, @activityId)";
+
+                cmd.Parameters.Add("@userMail", OleDbType.VarChar).Value = userMail;
+                cmd.Parameters.Add("@Date", OleDbType.DBDate).Value = Date;
+                cmd.Parameters.Add("@area", OleDbType.VarChar).Value = area;
+                cmd.Parameters.Add("@Payed", OleDbType.Boolean).Value = Payed;
+                cmd.Parameters.Add("@type", OleDbType.VarChar).Value = type;
+                cmd.Parameters.Add("@level", OleDbType.Integer).Value = level;
+                cmd.Parameters.Add("@minAge", OleDbType.Integer).Value = minAge;
+                cmd.Parameters.Add("@maxAge", OleDbType.Integer).Value = maxAge;
+                cmd.Parameters.Add("@smoke", OleDbType.Boolean).Value = smoke;
+                cmd.Parameters.Add("@content", OleDbType.LongVarChar).Value = content;
+                cmd.Parameters.Add("@activityId", OleDbType.Integer).Value = activityId;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (OleDbException ex)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
 
         }
 
-        public bool AddEstaeteAd(string userMail, string area, int activittyId, int minAge, int maxAge, bool kosher, bool quite, bool play, bool animalds, bool smoke, string address, int numofrooms, string content)
+        public bool AddEstaeteAd(string userMail, string area, int activityId, int minAge, int maxAge, bool kosher, bool quiet, bool animals, bool smoke, string address, int numofrooms, string content)
         {
-            return false;
+            conn = new OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb";
+            cmd = new OleDbCommand();
+            bool Payed = false;
+            DateTime Date = DateTime.Today;
+            cmd.CommandText = "INSERT into Real_Estate ([AdvertiserMail], [Date], [Loc], [Payed], [address], [numberOfRooms], [minAge], [maxAge], [smoke], [kosher], [quiet], [animals], [Content], [Activityid]) values(@userMail, @Date, @Loc, @Payed, @address, @numofrooms, @minAge, @maxAge, @smoke, @kosher, @quiet, @animals, @content, @activityId)";
+            cmd.Connection = conn;
+            conn.Open();
+            if (conn.State == ConnectionState.Open)
+            {
+                //@userMail, @Date, @Loc, @Payed, @address, @numberOfRooms, @minAge, @maxAge, @smoke, @kosher, @quiet, @content, @activityId)
+                cmd.Parameters.Add("@userMail", OleDbType.VarChar).Value = userMail;
+                cmd.Parameters.Add("@Date", OleDbType.DBDate).Value = Date;
+                cmd.Parameters.Add("@area", OleDbType.VarChar).Value = area;
+                cmd.Parameters.Add("@Payed", OleDbType.Boolean).Value = Payed;
+                cmd.Parameters.Add("@address", OleDbType.VarChar).Value = address;
+                cmd.Parameters.Add("@numofrooms", OleDbType.Integer).Value = numofrooms;
+                cmd.Parameters.Add("@minAge", OleDbType.Integer).Value = minAge;
+                cmd.Parameters.Add("@maxAge", OleDbType.Integer).Value = maxAge;
+                cmd.Parameters.Add("@smoke", OleDbType.Boolean).Value = smoke;
+                cmd.Parameters.Add("@kosher", OleDbType.Boolean).Value = kosher;
+                cmd.Parameters.Add("@quiet", OleDbType.Boolean).Value = quiet;
+                cmd.Parameters.Add("@quiet", OleDbType.Boolean).Value = animals;
+                cmd.Parameters.Add("@content", OleDbType.LongVarChar).Value = content;
+                cmd.Parameters.Add("@activityId", OleDbType.Integer).Value = activityId;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (OleDbException ex)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
 
         }
+
     }
 }
 

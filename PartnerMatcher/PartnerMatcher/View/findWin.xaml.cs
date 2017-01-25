@@ -1,4 +1,4 @@
-﻿﻿using PartnerMatcher.Logic;
+﻿using PartnerMatcher.Logic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -74,24 +74,31 @@ namespace PartnerMatcher.View
         public void AdvancedSearch_Click(object sender, RoutedEventArgs e)
         {
 
-            int mAge;
-            int maxiAge;
-            bool? smoke;
-            bool? kosher;
-            bool? quiet;
-            bool? animals;
-            bool? play;
-            string gender;
+            if (chosenArea==null|| chosenKind==null)
+            {
+                System.Windows.MessageBox.Show("you should choose kind and area for make Advanced Search");
+
+            }
+            else { 
             if (chosenKind.Equals("Dates"))
             {
+
+                int mAge;
+                int maxiAge;
+                bool? smoke;
+                bool? kosher;
+                bool? quiet;
+                bool? animals;
+                bool? play;
+                string gender;
                 lblCount.Visibility = System.Windows.Visibility.Hidden;
                 gvDataFree.Visibility = System.Windows.Visibility.Hidden;
                 gvData.Visibility = System.Windows.Visibility.Hidden;
-                searchDateWin searchhWin = new searchDateWin(busLogic);
+                SerachDate searchhWin = new SerachDate(busLogic);
                 searchhWin.ShowDialog();
                 if (searchhWin.isSearch == true)
                 {
-                   mAge = searchhWin.mAge;
+                    mAge = searchhWin.mAge;
                     maxiAge = searchhWin.maxiAge;
                     smoke = searchhWin.smoke;
                     kosher = searchhWin.kosher;
@@ -100,15 +107,127 @@ namespace PartnerMatcher.View
                     play = searchhWin.play;
                     gender = searchhWin.gender;
 
-                    BindAdvancedGrid(mAge,maxiAge, gender, smoke, kosher, quiet, animals, play);
-                     //added = busLogic.AdvancedSearchDates(mail, pass, age, gender, smoke, name, kosher, quiet, animals, play, about);
+                    BindAdvancedGridDates(mAge, maxiAge, gender, smoke, kosher, quiet, animals, play);
+                    //added = busLogic.AdvancedSearchDates(mail, pass, age, gender, smoke, name, kosher, quiet, animals, play, about);
 
                 }
 
             }
+            if (chosenKind.Equals("Sport"))
+            {
+                string type;
+                int level;
+                int mAge;
+                int maxiAge;
+                bool? smoke;
+                lblCount.Visibility = System.Windows.Visibility.Hidden;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+                gvData.Visibility = System.Windows.Visibility.Hidden;
+                searchSport searchhWin = new searchSport(busLogic);
+                searchhWin.ShowDialog();
+                if (searchhWin.isSearch == true)
+                {
+                    mAge = searchhWin.mAge;
+                    maxiAge = searchhWin.maxiAge;
+                    smoke = searchhWin.smoke;
+                    type = searchhWin._type;
+                    level = searchhWin._level;
+
+                    BindAdvancedGridSport(mAge, maxiAge, type, level, smoke);
+                    //added = busLogic.AdvancedSearchDates(mail, pass, age, gender, smoke, name, kosher, quiet, animals, play, about);
+
+                }
+
+
+
+
+            }
+
+            if (chosenKind.Equals("Real_Estate"))
+            {
+                int mAge;
+                int maxiAge;
+                bool? smoke;
+                bool? kosher;
+                bool? quiet;
+                bool? animals;
+                bool? play;
+
+                int roomsNum;
+                lblCount.Visibility = System.Windows.Visibility.Hidden;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+                gvData.Visibility = System.Windows.Visibility.Hidden;
+                SearchReal_Estate searchhWin = new SearchReal_Estate(busLogic);
+                searchhWin.ShowDialog();
+                if (searchhWin.isSearch == true)
+                {
+                    mAge = searchhWin.mAge;
+                    maxiAge = searchhWin.maxiAge;
+                    smoke = searchhWin.smoke;
+                    kosher = searchhWin.kosher;
+                    quiet = searchhWin.quiet;
+                    animals = searchhWin.animals;
+                    play = searchhWin.play;
+                    roomsNum = searchhWin.roomsNumber;
+
+
+                    BindAdvancedGridApartment(mAge, maxiAge, roomsNum, smoke, kosher, quiet, animals, play);
+
+
+                }
+
+
+
+
+
+            }
+
+
+            if (chosenKind.Equals("Trips"))
+            {
+                int mAge;
+                int maxiAge;
+                bool? smoke;
+                bool? kosher;
+                bool? quiet;
+                string kind;
+                string country;
+
+
+                lblCount.Visibility = System.Windows.Visibility.Hidden;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+                gvData.Visibility = System.Windows.Visibility.Hidden;
+                SearchTrips searchhWin = new SearchTrips(busLogic);
+                searchhWin.ShowDialog();
+                if (searchhWin.isSearch == true)
+                {
+                    mAge = searchhWin.mAge;
+                    maxiAge = searchhWin.maxiAge;
+                    smoke = searchhWin.smoke;
+                    kosher = searchhWin.kosher;
+                    quiet = searchhWin.quiet;
+                    kind = searchhWin.kind;
+
+                    kind = searchhWin.kind;
+                    country = searchhWin.Country;
+
+                    BindAdvancedGridTrips(mAge, maxiAge, kind, country, smoke, kosher, quiet);
+
+
+                }
+
+
+                }
+
+
+            }
         }
 
-        public void BindAdvancedGrid(int minAge, int maxAge, string gender, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
+
+
+
+
+        public void BindAdvancedGridDates(int minAge, int maxAge, string gender, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
         {
             if (chosenKind == null || chosenArea == null)
             {
@@ -157,6 +276,160 @@ namespace PartnerMatcher.View
 
         }
 
+
+
+
+        public void BindAdvancedGridApartment(int minAge, int maxAge, int roomsNum, bool? smoke, bool? kosher, bool? quiet, bool? animals, bool? play)
+        {
+            if (chosenKind == null || chosenArea == null)
+            {
+                MessageBox.Show("Please select kind of activity and area");
+                return;
+            }
+
+            bool found = false;
+            dt = new DataTable();
+            //execute the find operation for the payed adds and recive the results
+            busLogic.AdvancedSearchApartment(chosenArea, chosenKind, ref dt, true, minAge, maxAge, roomsNum, smoke, kosher, quiet, animals, play);
+            gvData.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                found = true;
+                lblCount.Visibility = System.Windows.Visibility.Hidden;
+                gvData.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else
+            {
+                gvData.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+            dt = new DataTable();
+
+            //execute the find operation for the free adds and recive the results
+            busLogic.AdvancedSearchApartment(chosenArea, chosenKind, ref dt, false, minAge, maxAge, roomsNum, smoke, kosher, quiet, animals, play);
+            gvDataFree.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+
+                gvDataFree.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else if (!found)
+            {
+                lblCount.Visibility = System.Windows.Visibility.Visible;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+
+        }
+
+
+
+
+
+        public void BindAdvancedGridTrips(int minAge, int maxAge, string kind, string country, bool? smoke, bool? kosher, bool? quiety)
+        {
+            if (chosenKind == null || chosenArea == null)
+            {
+                MessageBox.Show("Please select kind of activity and area");
+                return;
+            }
+
+            bool found = false;
+            dt = new DataTable();
+            //execute the find operation for the payed adds and recive the results
+            busLogic.AdvancedSearchTrips(chosenArea, chosenKind, ref dt, true, minAge, maxAge, kind, country, smoke, kosher, quiety);
+            gvData.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                found = true;
+                lblCount.Visibility = System.Windows.Visibility.Hidden;
+                gvData.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else
+            {
+                gvData.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+            dt = new DataTable();
+
+            //execute the find operation for the free adds and recive the results
+            busLogic.AdvancedSearchTrips(chosenArea, chosenKind, ref dt, false, minAge, maxAge, kind, country, smoke, kosher, quiety);
+            gvDataFree.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+
+                gvDataFree.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else if (!found)
+            {
+                lblCount.Visibility = System.Windows.Visibility.Visible;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+
+        }
+
+
+        public void BindAdvancedGridSport(int minAge, int maxAge, string type, int level, bool? smoke)
+        {
+            if (chosenKind == null || chosenArea == null)
+            {
+                MessageBox.Show("Please select kind of activity and area");
+                return;
+            }
+
+            bool found = false;
+            dt = new DataTable();
+            //execute the find operation for the payed adds and recive the results
+            busLogic.AdvancedSearchSport(chosenArea, chosenKind, ref dt, true, minAge, maxAge, type, level, smoke);
+            gvData.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+                found = true;
+                lblCount.Visibility = System.Windows.Visibility.Hidden;
+                gvData.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else
+            {
+                gvData.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+            dt = new DataTable();
+
+            //execute the find operation for the free adds and recive the results
+            busLogic.AdvancedSearchSport(chosenArea, chosenKind, ref dt, false, minAge, maxAge, type, level, smoke);
+            gvDataFree.ItemsSource = dt.AsDataView();
+
+
+            if (dt.Rows.Count > 0)
+            {
+
+                gvDataFree.Visibility = System.Windows.Visibility.Visible;
+
+            }
+            else if (!found)
+            {
+                lblCount.Visibility = System.Windows.Visibility.Visible;
+                gvDataFree.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+
+        }
 
         //find all matches in the db 
         private void BindGrid()
@@ -212,10 +485,11 @@ namespace PartnerMatcher.View
         private void button1_Click_req(object sender, RoutedEventArgs e)
         {
 
-         
-            if (user==null)
+
+            if (user == null)
                 System.Windows.MessageBox.Show("only registered users can apply requests");
-            else {
+            else
+            {
 
                 //IList rows = gvData.SelectedItems;
                 //int adId = (int)rows[0];
@@ -226,18 +500,18 @@ namespace PartnerMatcher.View
                 {
                     MessageBox.Show("you can apply for only one ad");
                     gvData.UnselectAll();
-                    gvDataFree.UnselectAll(); 
+                    gvDataFree.UnselectAll();
                 }
                 else
                 {
-                    if(drv != null)
+                    if (drv != null)
                     {
-                        String adId = (drv["Ad ID"]).ToString();
+                        String adId = (drv["AdID"]).ToString();
                         int adIdNum = Int32.Parse(adId);
-                        String activityId = (drv["Activity id"]).ToString();
-                        int activityNum= Int32.Parse(activityId);
-                        String AdvertiserMail = (drv["Advertiser Mail"]).ToString();
-                        requestWin cw = new requestWin(busLogic, userMail, adIdNum, AdvertiserMail, activityNum, chosenKind);            
+                        String activityId = (drv["Activityid"]).ToString();
+                        int activityNum = Int32.Parse(activityId);
+                        String AdvertiserMail = (drv["AdvertiserMail"]).ToString();
+                        requestWin cw = new requestWin(busLogic, userMail, adIdNum, AdvertiserMail, activityNum, chosenKind);
                         cw.ShowDialog();
                         if (cw.addreq == true)
                         {
@@ -250,10 +524,10 @@ namespace PartnerMatcher.View
 
                     if (drvFree != null)
                     {
-                        String adId = (drvFree["Ad ID"]).ToString();
+                        String adId = (drvFree["AdID"]).ToString();
                         int adIdNum = Int32.Parse(adId);
-                        String AdvertiserMail = (drvFree["Advertiser Mail"]).ToString();
-                        String activityId = (drvFree["Activity id"]).ToString();
+                        String AdvertiserMail = (drvFree["AdvertiserMail"]).ToString();
+                        String activityId = (drvFree["Activityid"]).ToString();
                         int activityNum = Int32.Parse(activityId);
                         requestWin cw = new requestWin(busLogic, userMail, adIdNum, AdvertiserMail, activityNum, chosenKind);
                         cw.ShowDialog();
@@ -264,11 +538,11 @@ namespace PartnerMatcher.View
                         }
                     }
 
-                    if (drv==null&& drvFree==null)
+                    if (drv == null && drvFree == null)
 
-                         MessageBox.Show("You have not selected an ad");
+                        MessageBox.Show("You have not selected an ad");
                 }
-              
+
                 // MessageBox.Show(result);
                 // var rowIndex = gvData.SelectedIndex;
 
@@ -296,7 +570,7 @@ namespace PartnerMatcher.View
 
         private void gvData_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+
         }
     }
 }

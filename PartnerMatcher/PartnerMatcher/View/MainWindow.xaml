@@ -12,7 +12,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5.3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -37,11 +37,12 @@
             </StackPanel>
         </StackPanel>
         <Image x:Name="image" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Height="170" VerticalAlignment="Top" Width="300" Source="pics/newLogo.png" Stretch="Fill" Margin="0,-40,0,0"/>
-        <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center"  Height="115" VerticalAlignment="Top" Width="105">
-            <Button x:Name="myAddsBtn" Content="My Adds" Margin="0,0,0.333,0" FontWeight="Bold" Click="myAddsBtn_Click_1"/>
+        <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="105">
+            <Button x:Name="createActBtn" Content="Create Activity" Margin="0,0,0.333,0" FontWeight="Bold" Click="createActBtn_Click"/>
+            <Button x:Name="myAddsBtn" Content="My Adds" Margin="0,5,0.333,0" FontWeight="Bold" Click="myAddsBtn_Click_1"/>
             <Button x:Name="myActivitiesBtn" Content="My Activities" Margin="0,5,0.333,0" FontWeight="Bold" Click="myActivitiesBtn_Click_1"/>
             <Button x:Name="myApplicationsBtn" Content="My requests" Margin="0,5,0.333,0" FontWeight="Bold" Click="myApplicationsBtn_Click_1"/>
-            <Button x:Name="PrefernecesBtn" Content="Preferneces" Margin="0,15,0.333,0" Click="PrefernecesBtn_Click_1" FontWeight="Bold" Height="20"/>
+            <Button x:Name="PrefernecesBtn" Content="Preferneces" Margin="0,15,0.333,0" Click="PrefernecesBtn_Click_1" FontWeight="Bold" />
         </StackPanel>
         <Image x:Name="image1" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="120" Source="pics/partners.png" />
     </Grid>

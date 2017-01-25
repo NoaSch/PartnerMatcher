@@ -20,25 +20,27 @@ namespace PartnerMatcher.View
     /// </summary>
     public partial class requestWin : Window
     {
+
         BusLogic buslogbusLogic;
         public bool addreq;
         string content;
-        string askerMail;      
+        string askerMail;
         int activityID;
-        int adId; 
+        int adId;
         string chosenKind;
-        string AdvertiserMail; 
+        string AdvertiserMail;
         public requestWin(BusLogic buslog, string usermail, int adId, string AdvertiserMail, int activityId, string chosenKind)
         {
             InitializeComponent();
-           buslogbusLogic = buslog;
+            buslogbusLogic = buslog;
             askerMail = usermail;
             activityID = activityId;
             this.chosenKind = chosenKind;
             this.adId = adId;
-            this.AdvertiserMail = AdvertiserMail; 
+            this.AdvertiserMail = AdvertiserMail;
         }
-        
+
+
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
